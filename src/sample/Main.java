@@ -16,7 +16,7 @@ public class Main extends Application {
             Parent root = (Parent)FXMLLoader.load(getClass().getResource("log.fxml"));
             System.out.println("shubham");
             primaryStage.setTitle("Galleria Mall");
-            Scene scene=new Scene(root,701, 461);
+            Scene scene=new Scene(root,822, 550);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             primaryStage.setScene(scene);
             primaryStage.show();
