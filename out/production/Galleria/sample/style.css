@@ -1,0 +1,12 @@
+.jfx-textfield{
+-fx-prompt-text-fill: #fff;
+-fx-text-fill:#fff;
+-fx-text-color:#fff;
+}
+.jfx-button{
+  -fx-background-color:#263238;
+}
+.jfx-button:hover{
+ -fx-background-color: #d3c02e;
+ -fx-text-fill:#000;
+}
