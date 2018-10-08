@@ -4,9 +4,9 @@
 -fx-text-color:#fff;
 }
 .jfx-button{
-  -fx-background-color:#263238;
+  -fx-background-color:none;
 }
 .jfx-button:hover{
- -fx-background-color: #d3c02e;
+ -fx-background-color: #ffe305;
  -fx-text-fill:#000;
 }

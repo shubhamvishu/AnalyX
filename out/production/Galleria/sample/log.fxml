@@ -11,105 +11,112 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="822.0" style="-fx-background-color: #283747; -fx-background-image: url(&quot;sample/img/muiblue.jpg&quot;),url(&quot;http://adwallpapers.xyz/uploads/posts/1935-material-design-background.jpg&quot;); -fx-background-size: cover;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <children>
-      <AnchorPane fx:id="in" onMouseClicked="#logg" prefHeight="76.0" prefWidth="283.0" style="-fx-background-color: #00ff00;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="1040.0" style="-fx-background-color: #283747; -fx-background-image: url(&quot;sample/img/black1.jpg&quot;); -fx-background-size: cover;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="605.0" prefWidth="280.0" style="-fx-background-color: #888; -fx-background-image: url(&quot;sample/img/black2.jpg&quot;);">
          <children>
-            <Label layoutX="110.0" layoutY="21.0" text="Login">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-        <Pane layoutX="564.0" layoutY="1.0" prefHeight="550.0" prefWidth="262.0" style="-fx-background-color: #888; -fx-background-image: url(&quot;sample/img/PR.jpg&quot;),url(&quot;https://s3.envato.com/files/179765389/PR.jpg&quot;);">
-            <children>
-                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="31.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@img/login.png" />
-                    </image>
-               <effect>
-                  <DropShadow />
-               </effect>
-                </ImageView>
-            <Label fx:id="res" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="435.0" prefHeight="83.0" prefWidth="261.0" style="-fx-background-color: #fff;" text="GALLERIA" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="36.0" />
-               </font>
-            </Label>
-            <Label fx:id="res1" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="507.0" prefHeight="43.0" prefWidth="261.0" style="-fx-background-color: #fff;" text="MALL" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            </children>
-        </Pane>
-      <AnchorPane fx:id="about" layoutX="281.0" onMouseClicked="#logg" prefHeight="76.0" prefWidth="283.0" style="-fx-background-color: #B2BABB;">
-         <children>
-            <Label layoutX="106.0" layoutY="21.0" text="About">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="mainlog" layoutX="-3.0" layoutY="74.0" maxWidth="829.0" prefHeight="476.0" prefWidth="566.0">
-         <children>
-              <ImageView layoutX="62.0" layoutY="105.0">
-                  <image>
-                      <Image url="@img/icons8_Male_User_50px.png" />
-                  </image>
-              </ImageView>
-              <JFXTextField fx:id="user" focusColor="#ffe305" labelFloat="true" layoutX="134.0" layoutY="114.0" prefHeight="31.0" prefWidth="347.0" promptText="Username" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="#ffe305">
-                  <font>
-                      <Font name="System Bold" size="15.0" />
-                  </font>
-              </JFXTextField>
-              <JFXPasswordField fx:id="pass" focusColor="#ffe305" labelFloat="true" layoutX="134.0" layoutY="241.0" prefHeight="31.0" prefWidth="347.0" promptText="Password" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="#ffe305">
-                  <font>
-                      <Font name="System Bold" size="15.0" />
-                  </font>
-              </JFXPasswordField>
-              <JFXButton buttonType="RAISED" layoutX="57.0" layoutY="353.0" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Sign In" textFill="#ffe305">
-                  <font>
-                      <Font name="System Bold" size="18.0" />
-                  </font>
-              </JFXButton>
-              <JFXButton layoutX="350.0" layoutY="353.0" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Log Out" textFill="#ffe305">
-                  <font>
-                      <Font name="System Bold" size="18.0" />
-                  </font>
-              </JFXButton>
-              <ImageView layoutX="62.0" layoutY="232.0">
-                  <image>
-                      <Image url="@img/icons8_Lock_50px.png" />
-                  </image>
-              </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="mainabout" layoutY="74.0" prefHeight="476.0" prefWidth="566.0" style="-fx-border-radius: 20px; -fx-border-image-slice: 30px;" visible="false">
-         <children>
-            <Label layoutX="144.0" layoutY="238.0" text="Shubham Chaudhary" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="174.0" fitWidth="192.0" layoutX="177.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <Label fx:id="res" layoutX="34.0" layoutY="309.0" prefHeight="31.0" prefWidth="212.0" />
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="39.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/me1.JPG" />
+                  <Image url="@img/login.png" />
                </image>
                <effect>
                   <DropShadow />
                </effect>
             </ImageView>
-            <Label layoutX="94.0" layoutY="307.0" textFill="WHITE" />
-            <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="80.0" layoutY="296.0" prefHeight="130.0" prefWidth="393.0" text="USN : 1NH16CS752&#10;SEMESTER : Vth &#10;" textFill="#00ffe4">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
+            <Pane layoutX="-1.0" layoutY="397.0" prefHeight="208.0" prefWidth="280.0" style="-fx-background-color: #CACFD2;">
+               <children>
+                  <Label layoutX="126.0" layoutY="27.0" text="THE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="31.0" layoutY="62.0" prefHeight="59.0" prefWidth="231.0" text="GALLERIA">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="87.0" layoutY="131.0" prefHeight="53.0" prefWidth="119.0" text="MALL">
+                     <font>
+                        <Font name="Lato Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="mainlog" layoutX="340.0" prefHeight="605.0" prefWidth="706.0">
+         <children>
+            <Pane layoutX="189.0" layoutY="60.0" prefHeight="486.0" prefWidth="443.0" style="-fx-background-color: #1C2833;">
+               <children>
+                  <JFXTextField fx:id="user" focusColor="#ffe305" labelFloat="true" layoutX="102.0" layoutY="147.0" prefHeight="31.0" prefWidth="309.0" promptText="Username" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="#ffe305">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="pass" focusColor="#ffe305" labelFloat="true" layoutX="98.0" layoutY="272.0" prefHeight="31.0" prefWidth="316.0" promptText="Password" styleClass="jfx-textfield" stylesheets="@style.css" unFocusColor="#ffe305">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="380.0" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Sign In" textFill="#ffe305">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="270.0" layoutY="380.0" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Log Out" textFill="#ffe305">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView layoutX="25.0" layoutY="137.0">
+                     <image>
+                        <Image url="@img/icons8_Male_User_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="25.0" layoutY="253.0">
+                     <image>
+                        <Image url="@img/icons8_Lock_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="152.0" layoutY="27.0" prefHeight="31.0" prefWidth="140.0" style="-fx-border-color: #fff; -fx-border-width: 4px; -fx-border-radius: 10px;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
          </children>
       </AnchorPane>
-      <Label layoutX="587.0" layoutY="292.0" prefHeight="43.0" prefWidth="211.0" />
-    </children>
+      <AnchorPane fx:id="in" layoutX="278.0" layoutY="-2.0" onMouseClicked="#logg" prefHeight="288.0" prefWidth="62.0" style="-fx-background-color: #000 #424949;">
+         <children>
+            <ImageView layoutX="11.0" layoutY="116.0">
+               <image>
+                  <Image url="@img/icons8_Male_User_40px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="about" layoutX="278.0" layoutY="286.0" onMouseClicked="#logg" prefHeight="316.0" prefWidth="62.0" style="-fx-background-color: #3498DB;">
+         <children>
+            <ImageView layoutX="11.0" layoutY="116.0">
+               <image>
+                  <Image url="@img/icons8_Info_40px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainabout" layoutX="340.0" prefHeight="605.0" prefWidth="700.0" visible="false">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="29.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/me1.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
