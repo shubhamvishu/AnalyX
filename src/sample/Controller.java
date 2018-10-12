@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -80,11 +81,12 @@ public class Controller implements Initializable {
             main.primaryStage.close();
             //TimeUnit.SECONDS.sleep(30);
             //System.out.println("bool:"+connec);
-           /* prim=new Stage();
+            prim=new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("opentable.fxml"));
             prim.setTitle("Shubham");
+            prim.setResizable(false);
             prim.setScene(new Scene(root, 700, 500));
-            prim.show();*/
+            prim.show();
 
         }
         catch (Exception e)
