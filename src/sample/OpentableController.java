@@ -21,7 +21,7 @@ public class OpentableController implements Initializable {
   @FXML
   JFXComboBox<String> comboBox;
   //@FXML JFXDatePicker dp;
-  ObservableList<String> list=FXCollections.observableArrayList("opentable");
+  ObservableList<String> list=FXCollections.observableArrayList("Customertable");
   Controller ct=new Controller();
 
 
@@ -39,10 +39,14 @@ public class OpentableController implements Initializable {
     {
         try {
             Stage prim = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource(comboBox.getValue() + ".fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/"+comboBox.getValue() + ".fxml"));
             prim.setTitle("Shubham");
             prim.setResizable(false);
-            prim.setScene(new Scene(root, 1433, 772));
+            switch (comboBox.getValue())
+            {
+                case "Customertable":prim.setScene(new Scene(root, 1238, 780));
+                                       break;
+            }
             prim.show();
         }
         catch (NullPointerException e)

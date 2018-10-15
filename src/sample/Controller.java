@@ -2,7 +2,6 @@ package sample;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -78,11 +76,11 @@ public class Controller implements Initializable {
             res.setText("Login successful");
             System.out.println("DB connected");
             connec=true;
-            main.primaryStage.close();
+            //main.primaryStage.close();
             //TimeUnit.SECONDS.sleep(30);
             //System.out.println("bool:"+connec);
             prim=new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("opentable.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/opentable.fxml"));
             prim.setTitle("Shubham");
             prim.setResizable(false);
             prim.setScene(new Scene(root, 700, 500));

@@ -4,9 +4,18 @@
 -fx-text-color:#fff;
 }
 .jfx-button{
-  -fx-background-color:none;
+  -fx-background-color:#263238;
 }
 .jfx-button:hover{
  -fx-background-color: #ffe305;
  -fx-text-fill:#000;
+}
+.jfx-customer-textfield{
+-fx-prompt-text-fill: #c2bbbb;
+-fx-text-fill:#fff;
+-fx-text-color:#c2bbbb;
+}
+.query-textfield{
+-fx-text-fill:#fff;
+-fx-text-color:#fff;
 }

@@ -12,8 +12,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primary) throws Exception{
-        try {
-            Parent root = (Parent)FXMLLoader.load(getClass().getResource("log.fxml"));
+        try {System.out.println("aaaaaaaaaaa");
+            Parent root = (Parent)FXMLLoader.load(getClass().getResource("FXML/log.fxml"));
             System.out.println("shubham");
             primaryStage.setTitle("Galleria Mall");
             primaryStage.setResizable(false);
