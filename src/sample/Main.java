@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
     Stage primaryStage=new Stage();
@@ -16,6 +17,7 @@ public class Main extends Application {
             System.out.println("shubham");
             primaryStage.setTitle("Galleria Mall");
             primaryStage.setResizable(false);
+            primaryStage.initStyle(StageStyle.UNDECORATED);
             Scene scene=new Scene(root,1103, 605);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             primaryStage.setScene(scene);

@@ -21,7 +21,7 @@ public class OpentableController implements Initializable {
   @FXML
   JFXComboBox<String> comboBox;
   //@FXML JFXDatePicker dp;
-  ObservableList<String> list=FXCollections.observableArrayList("Shubham","Rahul","Ayush","Toshbir","Suhas","loggedin","table");
+  ObservableList<String> list=FXCollections.observableArrayList("opentable");
   Controller ct=new Controller();
 
 
