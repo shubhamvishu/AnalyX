@@ -25,7 +25,8 @@ import java.util.ResourceBundle;
 public class CustomerTable implements Initializable {
 
     public static Stage insert;
-
+    @FXML PieChart pie1;
+    @FXML PieChart pie2;
     @FXML TableView<Customer> tablecustomer;
     @FXML
     private TableColumn<Customer, Integer> cid;
@@ -83,12 +84,7 @@ public class CustomerTable implements Initializable {
             ResultSet rs=st.executeQuery(query);
             while(rs.next())
             {   System.out.println("IM HERE");
-              /*  if(rs.getString("lname")==null) {
-                    System.out.println("SHUBH");
-                    System.out.println(rs.getString("usn") + " " + rs.getString("fname") + rs.getString("lname") + rs.getString("city")+" "+rs.getString("mobno")+" "+rs.getString("dob"));
-                    table.getItems().add(new Stud("1NH16CS757","cshubham","cstud",5,"Bangalore", 973959087,"1998-11-13"));
-                    table.getItems().add(new Stud(rs.getString("usn").toString(), rs.getString("fname").toString(), rs.getString("lname").toString(),Integer.parseInt(rs.getString("sem")), rs.getString("city").toString(), Long.parseLong("mobno"), rs.getString("dob").toString()));
-                }*/
+
                 //else{
                     System.out.println("ABCD");
                     System.out.println(rs.getString("cid") +" "+ rs.getString("cname")+" "+ rs.getString("email") + " " + rs.getString("phno"));
@@ -107,13 +103,7 @@ public class CustomerTable implements Initializable {
                // }
             }
 
-            //System.out.println("name2");
-            // st.executeUpdate(sqlq);
-            // ResultSet r=st.executeQuery(query);
-            // while(r.next())
-            // {
-            //     table.getItems().add(new Stud(Integer.parseInt(r.getString("id")),r.getString("name"),Integer.parseInt(r.getString("marks"))));
-            // }
+
             st.close();
             try {
                 con.close();
@@ -191,13 +181,34 @@ public class CustomerTable implements Initializable {
     }
     public void add(ActionEvent event) throws IOException {
         insert = new Stage();
-        //Parent root = FXMLLoader.load(getClass().getResource("Insertcustomer1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/Insertcustomer1.fxml"));
         insert.setTitle("New Customer");
         insert.initStyle(StageStyle.UNDECORATED);
         insert.setResizable(false);
-        //insert.setScene(new Scene(root, 420, 512));
+        insert.setScene(new Scene(root, 420, 512));
         insert.show();
     }
 
+    @FXML
+    public void piedata1(ActionEvent event)
+    {
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList(
+                new PieChart.Data("Java",60),
+                new PieChart.Data("C++",45),
+                new PieChart.Data("Python",25)
+        );
+        pie1.setData(list);
+
+    }
+    @FXML
+    public void piedata2(ActionEvent event)
+    {
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList(
+                new PieChart.Data("Java",60),
+                new PieChart.Data("C++",45),
+                new PieChart.Data("Python",25)
+        );
+        pie2.setData(list);
+    }
 
 }

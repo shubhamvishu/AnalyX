@@ -8,21 +8,21 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
-    Stage primaryStage=new Stage();
+    public static Stage primaryStage=new Stage();
 
     @Override
     public void start(Stage primary) throws Exception{
-        try {System.out.println("aaaaaaaaaaa");
+        try {
+            //System.out.println("11");
             Parent root = (Parent)FXMLLoader.load(getClass().getResource("FXML/log.fxml"));
             System.out.println("shubham");
             primaryStage.setTitle("Galleria Mall");
-            primaryStage.setResizable(false);
-            primaryStage.initStyle(StageStyle.UNDECORATED);
             Scene scene=new Scene(root,1103, 605);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            primaryStage.initStyle(StageStyle.UNDECORATED);
+            primaryStage.setResizable(false);
             primaryStage.setScene(scene);
             primaryStage.show();
-
 
         }
         catch (Exception e)

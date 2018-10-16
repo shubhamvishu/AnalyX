@@ -10,7 +10,7 @@ public class Customer {
     private final SimpleStringProperty phno;
 
 
-    public Customer(int cid, String cname, String email, String phno) {
+    public Customer(Integer cid, String cname,String email,String phno) {
         System.out.println("here CID="+cid);
         this.cid=new SimpleIntegerProperty(cid);
         this.cname=new SimpleStringProperty(cname);

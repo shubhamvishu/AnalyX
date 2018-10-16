@@ -15,9 +15,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 public class OpentableController implements Initializable {
   //@FXML Label mylabel;
+    public static Stage prim;
   @FXML
   JFXComboBox<String> comboBox;
   //@FXML JFXDatePicker dp;
@@ -35,18 +37,13 @@ public class OpentableController implements Initializable {
         mylabel.setText(comboBox.getValue());
     }*/
     @FXML
-    void openfile(ActionEvent event) throws IOException
-    {
+    void openfile(ActionEvent event) throws IOException, InterruptedException {
         try {
-            Stage prim = new Stage();
+            prim = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("FXML/"+comboBox.getValue() + ".fxml"));
             prim.setTitle("Shubham");
             prim.setResizable(false);
-            switch (comboBox.getValue())
-            {
-                case "Customertable":prim.setScene(new Scene(root, 1238, 780));
-                                       break;
-            }
+            prim.setScene(new Scene(root, 1238, 780));
             prim.show();
         }
         catch (NullPointerException e)
@@ -55,10 +52,13 @@ public class OpentableController implements Initializable {
             al.setTitle("OOPS!!!");
             al.setHeaderText(null);
             al.setContentText("Sorry...Unable to open "+comboBox.getValue()+".fxml");
-            al.showAndWait();
+            al.show();
+            TimeUnit.SECONDS.sleep(3);
+            al.close();
+
         }
         //ct.prim.close();
-       System.out.println("Selected:"+comboBox.getValue());
+        System.out.println("Selected:"+comboBox.getValue());
     }
     /*@FXML
     void dateChanged(ActionEvent event)

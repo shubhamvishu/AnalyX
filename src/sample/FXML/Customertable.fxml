@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
@@ -86,8 +87,18 @@
                     <content>
                         <FlowPane>
                            <children>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1238.0" />
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1238.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1238.0">
+                                 <children>
+                                    <PieChart fx:id="pie1" layoutX="332.0" layoutY="30.0" title="Languages" />
+                                    <JFXButton fx:id="load1" layoutX="542.0" layoutY="492.0" onAction="#piedata1" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: #000;" text="Load" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1238.0">
+                                 <children>
+                                    <PieChart fx:id="pie2" layoutX="332.0" layoutY="30.0" title="Customer eval" />
+                                    <JFXButton fx:id="load2" layoutX="542.0" layoutY="492.0" onAction="#piedata2" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: #000;" text="Load" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </FlowPane>
                     </content>
