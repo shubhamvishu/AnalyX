@@ -58,7 +58,10 @@ public class InsertCustomer {
                 System.out.println("hhijhiuhij");
             }
             if(a!=null && !b.isEmpty() && !c.isEmpty() && !d.isEmpty())
-             st.executeUpdate(q);
+            {
+                SendMail sm=new SendMail(temail.getText());
+                st.executeUpdate(q);
+            }
             else
                 throw new Exception();
             OpentableController.prim.setOpacity(1.0);

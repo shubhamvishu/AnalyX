@@ -30,14 +30,11 @@ public class Controller {
     @FXML AnchorPane about;
     @FXML AnchorPane mainlog;
     @FXML AnchorPane mainabout;
-    @FXML
-    private Label res;
-    @FXML
-    public JFXTextField user;
-    @FXML
-    public JFXPasswordField pass;
-
+    @FXML private Label res;
+    @FXML public JFXTextField user;
+    @FXML public JFXPasswordField pass;
     public boolean connec;
+
     public void login() throws IOException, SQLException, ClassNotFoundException {
 
         res.setText("");
@@ -45,9 +42,6 @@ public class Controller {
         String uname=user.getText();
         String pwd=pass.getText();
 
-       // if(uname.equals(username) && pwd.equals(password))
-       // {
-            //System.out.println("1");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/stud?allowPublicKeyRetrieval=true&useSSL=false";
