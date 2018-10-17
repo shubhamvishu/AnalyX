@@ -11,9 +11,9 @@ import java.util.Properties;
 
 
 public class SendMail {
-    
+
         String to ;
-        String from = "shubhmasand@gmail.com";
+        String from = "abcd@gmail.com";
 
          public SendMail(String t) {
              to = t;
@@ -28,7 +28,7 @@ public class SendMail {
              properties.put("mail.smtp.port", 587);
              Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
                  protected PasswordAuthentication getPasswordAuthentication() {
-                     return new PasswordAuthentication("shubhmasand@gmail.com", "shubhammasand89911131");
+                     return new PasswordAuthentication("abcd@gmail.com", "abcd123");
                  }
 
              });
@@ -42,7 +42,7 @@ public class SendMail {
                  message.setSubject("Hey its me");
 
                  BodyPart messageBodyPart1 = new MimeBodyPart();
-                 messageBodyPart1.setText("Thanyou for shopping in galeria mall");
+                 messageBodyPart1.setText("Thanyou for shopping in Galleria mall");
 
                  // creating second MimeBodyPart object
                  /*BodyPart messageBodyPart2 = new MimeBodyPart();

@@ -47,20 +47,17 @@ public class InsertCustomer {
             String uname = "root";
             String pass = "sc13111998";
             String query = "select * from customer";
-            //Connection conn=Connect.getconnected();
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, uname, pass);
             Statement st = con.createStatement();
             String q="insert into customer values("+a+",'"+b+"','"+c+"','"+d+"');";
             System.out.println("Query:"+"insert into customer values("+a+",'"+b+"','"+c+"','"+d+"');");
-            if(b.isEmpty())
-            {
-                System.out.println("hhijhiuhij");
-            }
+
             if(a!=null && !b.isEmpty() && !c.isEmpty() && !d.isEmpty())
             {
-                SendMail sm=new SendMail(temail.getText());
                 st.executeUpdate(q);
+                //SendMail sm=new SendMail(temail.getText());
+                //SendSms sms=new SendSms("9876543210","Thankyou dear customer for choosing galleria......hope to see u soon");
             }
             else
                 throw new Exception();
