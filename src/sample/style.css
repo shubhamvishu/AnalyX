@@ -19,3 +19,8 @@
 -fx-text-fill:#fff;
 -fx-text-color:#fff;
 }
+.jfx-date-picker .text-field{
+-jfx-unfocus-color: #c2bbbb;
+-fx-prompt-text-fill: #c2bbbb;
+-fx-text-fill: #fff;
+}
