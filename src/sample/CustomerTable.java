@@ -9,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -156,11 +153,10 @@ public class CustomerTable implements Initializable {
                 tablecustomer.getItems().add(new Customer(a,b,c,d));
             }
 
-        } catch (SQLException e) {
-
-            System.out.println("D "+e);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tablecustomer.getItems().clear();
             ResultSet rs = st.executeQuery("select * from customer");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
@@ -172,8 +168,62 @@ public class CustomerTable implements Initializable {
                 //System.out.println("E");
                 String d = rs.getString("phno");
                 //System.out.println("G");
-                tablecustomer.getItems().add(new Customer(a,b,c,d));
+                tablecustomer.getItems().add(new Customer(a, b, c, d));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException e) {
+
+            try {
+                System.out.println("D " + e);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from customer");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("cid"));
+                    //System.out.println("C");
+                    String b = rs.getString("cname");
+                    //System.out.println("D");
+                    String c = rs.getString("email");
+                    //System.out.println("E");
+                    String d = rs.getString("phno");
+                    //System.out.println("G");
+                    tablecustomer.getItems().add(new Customer(a, b, c, d));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tablecustomer.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from customer");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("cid"));
+                    //System.out.println("C");
+                    String b = rs.getString("cname");
+                    //System.out.println("D");
+                    String c = rs.getString("email");
+                    //System.out.println("E");
+                    String d = rs.getString("phno");
+                    //System.out.println("G");
+                    tablecustomer.getItems().add(new Customer(a, b, c, d));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

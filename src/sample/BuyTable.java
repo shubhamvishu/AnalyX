@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -163,26 +160,83 @@ public class BuyTable implements Initializable {
                 tablebuy.getItems().add(new Buy(a,b,c,d,e));
             }
 
-        } catch (SQLException ex) {
-
-            System.out.println("D "+ex);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tablebuy.getItems().clear();
             ResultSet rs = st.executeQuery("select * from buy");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
-                Integer a=Integer.parseInt(rs.getString("cid"));
+                Integer a = Integer.parseInt(rs.getString("cid"));
                 //System.out.println("C");
-                Integer b=Integer.parseInt(rs.getString("pid"));
+                Integer b = Integer.parseInt(rs.getString("pid"));
                 //System.out.println("C");
-                Integer c=Integer.parseInt(rs.getString("sid"));
+                Integer c = Integer.parseInt(rs.getString("sid"));
                 //System.out.println("C");
-                String d=rs.getString("dop");
+                String d = rs.getString("dop");
                 //System.out.println("C");
-                Integer e=Integer.parseInt(rs.getString("qty"));
+                Integer e = Integer.parseInt(rs.getString("qty"));
                 //System.out.println("C");
-                tablebuy.getItems().add(new Buy(a,b,c,d,e));
+                tablebuy.getItems().add(new Buy(a, b, c, d, e));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException ex) {
+
+            try {
+                System.out.println("D " + ex);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from buy");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("cid"));
+                    //System.out.println("C");
+                    Integer b = Integer.parseInt(rs.getString("pid"));
+                    //System.out.println("C");
+                    Integer c = Integer.parseInt(rs.getString("sid"));
+                    //System.out.println("C");
+                    String d = rs.getString("dop");
+                    //System.out.println("C");
+                    Integer e = Integer.parseInt(rs.getString("qty"));
+                    //System.out.println("C");
+                    tablebuy.getItems().add(new Buy(a, b, c, d, e));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tablebuy.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from buy");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("cid"));
+                    //System.out.println("C");
+                    Integer b = Integer.parseInt(rs.getString("pid"));
+                    //System.out.println("C");
+                    Integer c = Integer.parseInt(rs.getString("sid"));
+                    //System.out.println("C");
+                    String d = rs.getString("dop");
+                    //System.out.println("C");
+                    Integer e = Integer.parseInt(rs.getString("qty"));
+                    //System.out.println("C");
+                    tablebuy.getItems().add(new Buy(a, b, c, d, e));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

@@ -9,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -175,25 +172,80 @@ public class ProductTable implements Initializable {
                 tableproduct.getItems().add(new Product(a,b,c,d,e));
             }
 
-        } catch (SQLException ex) {
-
-            System.out.println("D "+ex);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
-            ResultSet rs = st.executeQuery("select * from product");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tableproduct.getItems().clear();
+            ResultSet result = st.executeQuery("select * from product");
             System.out.println("F");
-            while (rs.next()) {   //System.out.println(rs.next());
-                Integer a=Integer.parseInt(rs.getString("pid"));
+            while (result.next()) {   //System.out.println(rs.next());
+                Integer a=Integer.parseInt(result.getString("pid"));
                 //System.out.println("C");
-                String b=rs.getString("pname");
+                String b=result.getString("pname");
                 //System.out.println("D");
-                Integer c=Integer.parseInt(rs.getString("pcost"));
+                Integer c=Integer.parseInt(result.getString("pcost"));
                 //System.out.println("E");
-                Integer d=Integer.parseInt(rs.getString("profit"));
+                Integer d=Integer.parseInt(result.getString("profit"));
                 //System.out.println("G");
-                Integer e=Integer.parseInt(rs.getString("catid"));
+                Integer e=Integer.parseInt(result.getString("catid"));
                 tableproduct.getItems().add(new Product(a,b,c,d,e));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException ex) {
+
+            try {
+                System.out.println("D " + ex);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from product");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("pid"));
+                    //System.out.println("C");
+                    String b = rs.getString("pname");
+                    //System.out.println("D");
+                    Integer c = Integer.parseInt(rs.getString("pcost"));
+                    //System.out.println("E");
+                    Integer d = Integer.parseInt(rs.getString("profit"));
+                    //System.out.println("G");
+                    Integer e = Integer.parseInt(rs.getString("catid"));
+                    tableproduct.getItems().add(new Product(a, b, c, d, e));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tableproduct.getItems().clear();
+                ResultSet result = st.executeQuery("select * from product");
+                System.out.println("F");
+                while (result.next()) {   //System.out.println(rs.next());
+                    Integer a=Integer.parseInt(result.getString("pid"));
+                    //System.out.println("C");
+                    String b=result.getString("pname");
+                    //System.out.println("D");
+                    Integer c=Integer.parseInt(result.getString("pcost"));
+                    //System.out.println("E");
+                    Integer d=Integer.parseInt(result.getString("profit"));
+                    //System.out.println("G");
+                    Integer e=Integer.parseInt(result.getString("catid"));
+                    tableproduct.getItems().add(new Product(a,b,c,d,e));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

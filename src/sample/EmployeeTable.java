@@ -11,10 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -211,28 +208,89 @@ public class EmployeeTable implements Initializable {
                 tableemployee.getItems().add(new Employee(a,b,c,d,e,f,g,h,i));
             }
 
-        } catch (SQLException ex) {
-
-            System.out.println("D "+ex);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tableemployee.getItems().clear();
             ResultSet rs = st.executeQuery("select * from employee");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
-                Integer a=Integer.parseInt(rs.getString("eid"));
+                Integer a = Integer.parseInt(rs.getString("eid"));
                 //System.out.println("C");
-                String b=rs.getString("ename");
+                String b = rs.getString("ename");
                 //System.out.println("D");
-                String c=rs.getString("phno");
+                String c = rs.getString("phno");
                 //System.out.println("E");
-                String d=rs.getString("address");
-                Integer e=Integer.parseInt(rs.getString("sal"));
-                Integer f=Integer.parseInt(rs.getString("up"));
-                Integer g=Integer.parseInt(rs.getString("down"));
-                Integer h=Integer.parseInt(rs.getString("sid"));
-                String i=rs.getString("doj");
-                tableemployee.getItems().add(new Employee(a,b,c,d,e,f,g,h,i));
+                String d = rs.getString("address");
+                Integer e = Integer.parseInt(rs.getString("sal"));
+                Integer f = Integer.parseInt(rs.getString("up"));
+                Integer g = Integer.parseInt(rs.getString("down"));
+                Integer h = Integer.parseInt(rs.getString("sid"));
+                String i = rs.getString("doj");
+                tableemployee.getItems().add(new Employee(a, b, c, d, e, f, g, h, i));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException ex) {
+
+            try {
+                System.out.println("D " + ex);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from employee");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("eid"));
+                    //System.out.println("C");
+                    String b = rs.getString("ename");
+                    //System.out.println("D");
+                    String c = rs.getString("phno");
+                    //System.out.println("E");
+                    String d = rs.getString("address");
+                    Integer e = Integer.parseInt(rs.getString("sal"));
+                    Integer f = Integer.parseInt(rs.getString("up"));
+                    Integer g = Integer.parseInt(rs.getString("down"));
+                    Integer h = Integer.parseInt(rs.getString("sid"));
+                    String i = rs.getString("doj");
+                    tableemployee.getItems().add(new Employee(a, b, c, d, e, f, g, h, i));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tableemployee.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from employee");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("eid"));
+                    //System.out.println("C");
+                    String b = rs.getString("ename");
+                    //System.out.println("D");
+                    String c = rs.getString("phno");
+                    //System.out.println("E");
+                    String d = rs.getString("address");
+                    Integer e = Integer.parseInt(rs.getString("sal"));
+                    Integer f = Integer.parseInt(rs.getString("up"));
+                    Integer g = Integer.parseInt(rs.getString("down"));
+                    Integer h = Integer.parseInt(rs.getString("sid"));
+                    String i = rs.getString("doj");
+                    tableemployee.getItems().add(new Employee(a, b, c, d, e, f, g, h, i));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

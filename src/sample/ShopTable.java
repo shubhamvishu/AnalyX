@@ -11,10 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -175,23 +172,74 @@ public class ShopTable implements Initializable {
                 tableshop.getItems().add(new Shop(a,b,c,d));
             }
 
-        } catch (SQLException e) {
-
-            System.out.println("D "+e);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tableshop.getItems().clear();
             ResultSet rs = st.executeQuery("select * from shop");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
-                Integer a=Integer.parseInt(rs.getString("sid"));
+                Integer a = Integer.parseInt(rs.getString("sid"));
                 //System.out.println("C");
-                String b=rs.getString("sname");
+                String b = rs.getString("sname");
                 //System.out.println("D");
-                Integer c=Integer.parseInt(rs.getString("rev"));
+                Integer c = Integer.parseInt(rs.getString("rev"));
                 //System.out.println("E");
-                Integer d=Integer.parseInt(rs.getString("catid"));
-                tableshop.getItems().add(new Shop(a,b,c,d));
+                Integer d = Integer.parseInt(rs.getString("catid"));
+                tableshop.getItems().add(new Shop(a, b, c, d));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException e) {
+
+            try {
+                System.out.println("D " + e);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from shop");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("sid"));
+                    //System.out.println("C");
+                    String b = rs.getString("sname");
+                    //System.out.println("D");
+                    Integer c = Integer.parseInt(rs.getString("rev"));
+                    //System.out.println("E");
+                    Integer d = Integer.parseInt(rs.getString("catid"));
+                    tableshop.getItems().add(new Shop(a, b, c, d));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tableshop.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from shop");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("sid"));
+                    //System.out.println("C");
+                    String b = rs.getString("sname");
+                    //System.out.println("D");
+                    Integer c = Integer.parseInt(rs.getString("rev"));
+                    //System.out.println("E");
+                    Integer d = Integer.parseInt(rs.getString("catid"));
+                    tableshop.getItems().add(new Shop(a, b, c, d));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

@@ -16,7 +16,7 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1238.0" style="-fx-background-color: #333;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BuyTable">
   <tabs>
-    <Tab text="Category">
+    <Tab text="Buy">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1259.0">
                <children>

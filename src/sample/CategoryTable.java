@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -160,25 +157,80 @@ public class CategoryTable implements Initializable {
                 tablecategory.getItems().add(new Category(a,b,c));
             }
 
-        } catch (SQLException e) {
-
-            System.out.println("D "+e);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tablecategory.getItems().clear();
             ResultSet rs = st.executeQuery("select * from category");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
-                System.out.println(rs.getString("catid") +" "+ rs.getString("catname")+" "+ rs.getString("desp") );
+                System.out.println(rs.getString("catid") + " " + rs.getString("catname") + " " + rs.getString("desp"));
                 //System.out.println("A");
                 //System.out.println("B");
-                Integer a=Integer.parseInt(rs.getString("catid"));
+                Integer a = Integer.parseInt(rs.getString("catid"));
                 //System.out.println("C");
-                String b=rs.getString("catname");
+                String b = rs.getString("catname");
                 //System.out.println("D");
-                String c=rs.getString("desp");
+                String c = rs.getString("desp");
                 //System.out.println("E");
-                tablecategory.getItems().add(new Category(a,b,c));
+                tablecategory.getItems().add(new Category(a, b, c));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException e) {
+
+            try {
+                System.out.println("D " + e);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from category");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    System.out.println(rs.getString("catid") + " " + rs.getString("catname") + " " + rs.getString("desp"));
+                    //System.out.println("A");
+                    //System.out.println("B");
+                    Integer a = Integer.parseInt(rs.getString("catid"));
+                    //System.out.println("C");
+                    String b = rs.getString("catname");
+                    //System.out.println("D");
+                    String c = rs.getString("desp");
+                    //System.out.println("E");
+                    tablecategory.getItems().add(new Category(a, b, c));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tablecategory.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from category");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    System.out.println(rs.getString("catid") + " " + rs.getString("catname") + " " + rs.getString("desp"));
+                    //System.out.println("A");
+                    //System.out.println("B");
+                    Integer a = Integer.parseInt(rs.getString("catid"));
+                    //System.out.println("C");
+                    String b = rs.getString("catname");
+                    //System.out.println("D");
+                    String c = rs.getString("desp");
+                    //System.out.println("E");
+                    tablecategory.getItems().add(new Category(a, b, c));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 

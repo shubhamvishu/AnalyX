@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -144,18 +141,59 @@ public class OwnshopTable implements Initializable {
                 tableownshop.getItems().add(new Ownshop(a,b));
             }
 
-        } catch (SQLException ex) {
-
-            System.out.println("D "+ex);
-            st.executeUpdate(cmd.getText());
-            System.out.println("E");
+        }
+        catch (SQLSyntaxErrorException syntax)
+        {
+            tableownshop.getItems().clear();
             ResultSet rs = st.executeQuery("select * from ownshop");
             System.out.println("F");
             while (rs.next()) {   //System.out.println(rs.next());
-                Integer a=Integer.parseInt(rs.getString("oid"));
-                Integer b=Integer.parseInt(rs.getString("sid"));
-                tableownshop.getItems().add(new Ownshop(a,b));
+                Integer a = Integer.parseInt(rs.getString("oid"));
+                Integer b = Integer.parseInt(rs.getString("sid"));
+                tableownshop.getItems().add(new Ownshop(a, b));
 
+            }
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("WRONG SYNTAX !!!");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
+        catch (SQLException ex) {
+
+            try {
+                System.out.println("D " + ex);
+                st.executeUpdate(cmd.getText());
+                System.out.println("E");
+                ResultSet rs = st.executeQuery("select * from ownshop");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("oid"));
+                    Integer b = Integer.parseInt(rs.getString("sid"));
+                    tableownshop.getItems().add(new Ownshop(a, b));
+
+                }
+            }
+            catch (SQLSyntaxErrorException syntax)
+            {
+                tableownshop.getItems().clear();
+                ResultSet rs = st.executeQuery("select * from ownshop");
+                System.out.println("F");
+                while (rs.next()) {   //System.out.println(rs.next());
+                    Integer a = Integer.parseInt(rs.getString("oid"));
+                    Integer b = Integer.parseInt(rs.getString("sid"));
+                    tableownshop.getItems().add(new Ownshop(a, b));
+
+                }
+                Alert al = new Alert(Alert.AlertType.ERROR);
+                al.setTitle("OOPS!!!");
+                al.setHeaderText(null);
+                al.setContentText("WRONG SYNTAX !!!");
+                al.showAndWait();
+                //TimeUnit.SECONDS.sleep(3);
+                al.close();
             }
 
 
