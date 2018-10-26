@@ -595,7 +595,7 @@ public class DBTablePrinter {
                 for (Column c : columns) {
 
                     // This should form a format string like: "%-60s"
-                    format = String.format("| %%%s%ds ", c.getJustifyFlag(), c.getWidth());
+                    format = String.format("|   %%%s%ds  ", c.getJustifyFlag(), c.getWidth());
                     stb.append(
                             String.format(format, c.getValue(i))
                     );
