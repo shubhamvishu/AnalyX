@@ -301,7 +301,7 @@ public class ProductTable implements Initializable {
                 TextArea textArea=new TextArea(s);
                 textArea.setStyle("-fx-font-weight:bold;");
                 content.setBody(textArea);
-                JFXDialog dialog=new JFXDialog(stackpane,content,JFXDialog.DialogTransition.TOP);
+                JFXDialog dialog=new JFXDialog(stackpane,content,JFXDialog.DialogTransition.BOTTOM);
                 content.setStyle("-fx-background-color:#45B39D;-fx-pref-width:600px;-fx-pref-height:450px;-fx-text-fill:#ff0000;-fx-text-color:#ff0000;");
                 dialog.setContent(content);
                 JFXButton button=new JFXButton("Okay");

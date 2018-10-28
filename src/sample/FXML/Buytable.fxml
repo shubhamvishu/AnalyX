@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,7 +13,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
@@ -21,7 +22,7 @@
       <content>
             <StackPane fx:id="stackpane">
                <children>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1259.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="741.0" prefWidth="1259.0" style="-fx-background-image: url(&quot;sample/img/PR.jpeg&quot;);">
                      <children>
                         <TableView fx:id="tablebuy" layoutX="27.0" layoutY="94.0" prefHeight="539.0" prefWidth="1177.0">
                           <columns>
@@ -91,11 +92,20 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f5f5f5;">
                <children>
-                  <ScrollPane prefHeight="741.0" prefWidth="1238.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <content>
-                        <FlowPane />
-                    </content>
-                  </ScrollPane>
+                  <LineChart fx:id="linechart" layoutX="71.0" layoutY="38.0" prefHeight="546.0" prefWidth="873.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Label fx:id="lab1" layoutX="967.0" layoutY="38.0" prefHeight="274.0" prefWidth="229.0" text="Label" />
+                  <JFXButton layoutX="519.0" layoutY="600.0" onAction="#btn" prefHeight="60.0" prefWidth="201.0" style="-fx-background-color: #333;" text="Show" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
                </children>
             </AnchorPane>
       </content>

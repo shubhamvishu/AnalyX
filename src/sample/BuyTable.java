@@ -13,6 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
@@ -22,6 +24,8 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class BuyTable implements Initializable {
@@ -31,12 +35,15 @@ public class BuyTable implements Initializable {
     @FXML TableView<Buy> tablebuy;
     @FXML
     StackPane stackpane;
+    @FXML LineChart linechart;
     @FXML private TableColumn<Buy, Integer> cid;
     @FXML private TableColumn<Buy, Integer> pid;
     @FXML private TableColumn<Buy, Integer> sid;
     @FXML private TableColumn<Buy, String> dop;
     @FXML private TableColumn<Buy, Integer> qty;
     @FXML private Label lab;
+    @FXML private Label lab1;
+    @FXML private Label lab2;
     @FXML
     private TextField cmd;
 
@@ -319,6 +326,59 @@ public class BuyTable implements Initializable {
         insertbuy.setResizable(false);
         insertbuy.setScene(new Scene(root, 458, 596));
         insertbuy.show();
+    }
+    public void btn(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        linechart.getData().clear();
+        XYChart.Series<String,Number> series=new XYChart.Series<String,Number>();
+        XYChart.Series<String,Number> series1=new XYChart.Series<String,Number>();
+        ResultSet r=st.executeQuery("select year(dop),month(dop),count(cid) from buy group by year(dop),month(dop);");
+        StringBuilder stb=new StringBuilder("");
+        while (r.next())
+        {
+            System.out.println(r.getString("year(dop)"));
+            if(r.getString("year(dop)").equals("2017")) {
+                stb.append(r.getString("month(dop)") + "   " + r.getString("count(cid)") + "\n");
+                String str = r.getString("month(dop)");
+                Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
+                System.out.println("yeahhh"+number.intValue());
+                //series.getData().add(new XYChart.Data<String, Number>());
+                series.getData().add(new XYChart.Data<String, Number>(str, number));
+            }
+            else if(r.getString("year(dop)").equals("2018"))
+            {
+                stb.append(r.getString("month(dop)") + "   " + r.getString("count(cid)") + "\n");
+                String str = r.getString("month(dop)");
+                Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
+                 System.out.println("yeahhh1111"+number.intValue());
+                //series.getData().add(new XYChart.Data<String, Number>());
+                series1.getData().add(new XYChart.Data<String, Number>(str, number));
+
+            }
+            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        }
+        lab1.setText(stb.toString());
+       /* XYChart.Series<String,Number> series1=new XYChart.Series<String,Number>();
+        ResultSet rs1=st.executeQuery("select month(dop),count(cid) where year(dop)=2018 from buy group by month(dop);");
+        StringBuilder stb1=new StringBuilder("");
+        while (r.next())
+        {
+            stb.append(r.getString("month(dop)")+"   "+r.getString("count(cid)")+"\n");
+            String str=r.getString("month(dop)");
+            Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
+            System.out.println(number.intValue());
+            //series.getData().add(new XYChart.Data<String, Number>());
+            series1.getData().add(new XYChart.Data<String, Number>(str,number));
+            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        }
+        lab1.setText(stb.toString());*/
+        linechart.getData().addAll(series,series1);
+
     }
 
 

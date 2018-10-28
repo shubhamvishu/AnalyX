@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="512.0" prefWidth="420.0" style="-fx-background-color: #333;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertShop">
+<AnchorPane prefHeight="512.0" prefWidth="420.0" style="-fx-background-color: #212F3C;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertShop">
    <children>
       <JFXButton fx:id="addshop" layoutX="32.0" layoutY="439.0" onAction="#add" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: #06f141; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="  Add">
          <font>
@@ -37,9 +37,14 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <ImageView layoutX="162.0" layoutY="20.0">
+      <ImageView layoutX="140.0" layoutY="31.0">
          <image>
-            <Image url="@../img/icons8_Add_User_Male_96px.png" />
+            <Image url="@../img/icons8_Shop_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="204.0" layoutY="31.0">
+         <image>
+            <Image url="@../img/icons8_Small_Business_96px.png" />
          </image>
       </ImageView>
    </children>

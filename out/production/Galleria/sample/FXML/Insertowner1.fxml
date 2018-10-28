@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="555.0" prefWidth="444.0" style="-fx-background-color: #333;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertOwner">
+<AnchorPane prefHeight="555.0" prefWidth="444.0" style="-fx-background-color: #1B4F72;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertOwner">
    <children>
       <JFXButton fx:id="addowner" layoutX="33.0" layoutY="476.0" onAction="#add" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: #06f141; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="  Add">
          <font>
@@ -22,9 +22,9 @@
          </graphic>
       </JFXButton>
       <JFXTextField fx:id="toid" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="148.0" prefHeight="37.0" prefWidth="355.0" promptText="OID" styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#c2bbbb" />
-      <JFXTextField fx:id="toname" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="217.0" prefHeight="37.0" prefWidth="355.0" promptText="Owner Name" styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
-      <JFXTextField fx:id="tphno" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="283.0" prefHeight="37.0" prefWidth="355.0" promptText="Phone No." styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
-      <JFXTextField fx:id="taddress" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="348.0" prefHeight="37.0" prefWidth="355.0" promptText="Address" styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXTextField fx:id="toname" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="234.0" prefHeight="37.0" prefWidth="355.0" promptText="Owner Name" styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXTextField fx:id="tphno" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="312.0" prefHeight="37.0" prefWidth="355.0" promptText="Phone No." styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXTextField fx:id="taddress" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="394.0" prefHeight="37.0" prefWidth="355.0" promptText="Address" styleClass="jfx-customer-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
       <JFXButton fx:id="cancel" layoutX="221.0" layoutY="476.0" onAction="#cancelInsert" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: #dadada#34495E; -fx-background-radius: 30px; -fx-border-radius: 30px;" text=" Cancel">
          <font>
             <Font name="System Bold" size="15.0" />
