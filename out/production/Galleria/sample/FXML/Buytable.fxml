@@ -92,20 +92,60 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f5f5f5;">
                <children>
-                  <LineChart fx:id="linechart" layoutX="71.0" layoutY="38.0" prefHeight="546.0" prefWidth="873.0">
-                    <xAxis>
-                      <CategoryAxis side="BOTTOM" />
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis side="LEFT" />
-                    </yAxis>
-                  </LineChart>
-                  <Label fx:id="lab1" layoutX="967.0" layoutY="38.0" prefHeight="274.0" prefWidth="229.0" text="Label" />
-                  <JFXButton layoutX="519.0" layoutY="600.0" onAction="#btn" prefHeight="60.0" prefWidth="201.0" style="-fx-background-color: #333;" text="Show" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </JFXButton>
+                  <TabPane layoutY="-6.0" prefHeight="749.0" prefWidth="1238.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Graph 1">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E5E7E9;">
+                                 <children>
+                                    <LineChart fx:id="linechart1" layoutX="41.0" layoutY="30.0" legendSide="RIGHT" prefHeight="603.0" prefWidth="894.0" style="-fx-background-color: #D7DBDD;" title="Products Sold">
+                                       <xAxis>
+                                          <CategoryAxis label="Month" side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis label="No of products sold" side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <JFXButton layoutX="510.0" layoutY="645.0" onAction="#load1" prefHeight="59.0" prefWidth="180.0" style="-fx-background-color: #333; -fx-background-radius: 30px; -fx-border-radius: 30px;" styleClass="load-btn" stylesheets="@../style.css" text="Load" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label fx:id="lab1" alignment="TOP_LEFT" layoutX="950.0" layoutY="30.0" prefHeight="604.0" prefWidth="232.0" style="-fx-background-color: #333;" text="Label" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Graph 2">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E5E7E9;">
+                                 <children>
+                                    <LineChart fx:id="linechart2" layoutX="42.0" layoutY="29.0" legendSide="RIGHT" prefHeight="603.0" prefWidth="899.0" style="-fx-background-color: #D7DBDD;" title="Products Sold">
+                                      <xAxis>
+                                        <CategoryAxis label="Month" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis label="No of products sold" side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                    <JFXButton layoutX="510.0" layoutY="648.0" onAction="#load2" prefHeight="59.0" prefWidth="180.0" style="-fx-background-color: #333; -fx-background-radius: 30px; -fx-border-radius: 30px;" styleClass="loadbtn" stylesheets="@../style.css" text="Load" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label fx:id="lab2" alignment="TOP_LEFT" layoutX="952.0" layoutY="31.0" prefHeight="599.0" prefWidth="233.0" style="-fx-background-color: #333;" text="Label" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
                </children>
             </AnchorPane>
       </content>

@@ -35,7 +35,8 @@ public class BuyTable implements Initializable {
     @FXML TableView<Buy> tablebuy;
     @FXML
     StackPane stackpane;
-    @FXML LineChart linechart;
+    @FXML LineChart linechart1;
+    @FXML LineChart linechart2;
     @FXML private TableColumn<Buy, Integer> cid;
     @FXML private TableColumn<Buy, Integer> pid;
     @FXML private TableColumn<Buy, Integer> sid;
@@ -327,59 +328,83 @@ public class BuyTable implements Initializable {
         insertbuy.setScene(new Scene(root, 458, 596));
         insertbuy.show();
     }
-    public void btn(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+    public void load1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
         String uname = "root";
         String pass = "sc13111998";
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, uname, pass);
         Statement st = con.createStatement();
-        linechart.getData().clear();
-        XYChart.Series<String,Number> series=new XYChart.Series<String,Number>();
-        XYChart.Series<String,Number> series1=new XYChart.Series<String,Number>();
-        ResultSet r=st.executeQuery("select year(dop),month(dop),count(cid) from buy group by year(dop),month(dop);");
-        StringBuilder stb=new StringBuilder("");
-        while (r.next())
-        {
-            System.out.println(r.getString("year(dop)"));
-            if(r.getString("year(dop)").equals("2017")) {
-                stb.append(r.getString("month(dop)") + "   " + r.getString("count(cid)") + "\n");
-                String str = r.getString("month(dop)");
-                Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
-                System.out.println("yeahhh"+number.intValue());
-                //series.getData().add(new XYChart.Data<String, Number>());
-                series.getData().add(new XYChart.Data<String, Number>(str, number));
-            }
-            else if(r.getString("year(dop)").equals("2018"))
-            {
-                stb.append(r.getString("month(dop)") + "   " + r.getString("count(cid)") + "\n");
-                String str = r.getString("month(dop)");
-                Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
-                 System.out.println("yeahhh1111"+number.intValue());
-                //series.getData().add(new XYChart.Data<String, Number>());
-                series1.getData().add(new XYChart.Data<String, Number>(str, number));
-
-            }
-            //series.getData().add(new XYChart.Data<String, Number>("C",376));
-        }
-        lab1.setText(stb.toString());
-       /* XYChart.Series<String,Number> series1=new XYChart.Series<String,Number>();
-        ResultSet rs1=st.executeQuery("select month(dop),count(cid) where year(dop)=2018 from buy group by month(dop);");
+        linechart1.getData().clear();
+        XYChart.Series<String,Number> series=new XYChart.Series<String, Number>();
         StringBuilder stb1=new StringBuilder("");
-        while (r.next())
-        {
-            stb.append(r.getString("month(dop)")+"   "+r.getString("count(cid)")+"\n");
-            String str=r.getString("month(dop)");
-            Number number = NumberFormat.getInstance().parse(r.getString("count(cid)"));
-            System.out.println(number.intValue());
-            //series.getData().add(new XYChart.Data<String, Number>());
-            series1.getData().add(new XYChart.Data<String, Number>(str,number));
-            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        for(int i=1;i<=12;i++) {
+            int count=0;
+            ResultSet r=st.executeQuery("select month(dop) from buy where year(dop)=year(curdate()) order by month(dop);");
+            while (r.next()) {
+                System.out.println(Integer.parseInt(r.getString("month(dop)"))+"  "+i);
+                if(Integer.parseInt(r.getString("month(dop)"))==i) {
+                    count++;
+                    System.out.println("ABCD");
+                }
+            }
+            stb1.append(i + "       " + count+ "\n");
+            Number number1 =count;
+            series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), number1));
+
         }
-        lab1.setText(stb.toString());*/
-        linechart.getData().addAll(series,series1);
+        lab1.setText(stb1.toString());
+        linechart1.getData().addAll(series);
 
     }
+    public void load2(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        linechart2.getData().clear();
+        XYChart.Series<String,Number> series=new XYChart.Series<String, Number>();
+        StringBuilder stb1=new StringBuilder("");
+        for(int i=1;i<=12;i++) {
+            int count=0;
+            ResultSet r=st.executeQuery("select month(dop) from buy where year(dop)='2017' order by month(dop);");
+            while (r.next()) {
+                System.out.println(Integer.parseInt(r.getString("month(dop)"))+"  "+i);
+                if(Integer.parseInt(r.getString("month(dop)"))==i) {
+                    count++;
+                    System.out.println("ABCD");
+                }
+            }
+            stb1.append(i + "       " + count+ "\n");
+            Number number1 =count;
+            series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), number1));
+
+            }
+        XYChart.Series<String,Number> series1=new XYChart.Series<String,Number>();
+        StringBuilder stb2=new StringBuilder("");
+        for(int i=1;i<=12;i++) {
+            int count=0;
+            ResultSet r=st.executeQuery("select month(dop) from buy where year(dop)=year(curdate()) order by month(dop);");
+            while (r.next()) {
+                System.out.println(Integer.parseInt(r.getString("month(dop)"))+"  "+i);
+                if(Integer.parseInt(r.getString("month(dop)"))==i) {
+                    count++;
+                    System.out.println("DEF");
+                }
+
+            }
+            stb2.append(i + "       " + count+ "\n");
+            Number number2 =count;
+            series1.getData().add(new XYChart.Data<String, Number>(String.valueOf(i),number2));
+
+        }
+        lab2.setText("2017\n"+stb1.toString()+"\n\n"+"2018\n"+stb2.toString());
+        linechart2.getData().addAll(series,series1);
+
+    }
+
 
 
 

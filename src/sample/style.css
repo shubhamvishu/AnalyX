@@ -34,3 +34,13 @@
 -fx-prompt-text-fill: #000;
 -fx-text-fill: #000;
 }
+.text-white{
+-fx-text-fill:#fff;
+}
+.text-black{
+-fx-text-fill:#000;
+}
+.loadbtn:hover{
+-fx-background-color:#0E6655;
+-fx-text-fill:#fff;
+}
