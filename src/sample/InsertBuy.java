@@ -65,7 +65,7 @@ public class InsertBuy {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            BuyTable.insertbuy.close();
 
 
         }
@@ -86,7 +86,6 @@ public class InsertBuy {
     public void cancelInsert(ActionEvent event)
     {
         BuyTable.insertbuy.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

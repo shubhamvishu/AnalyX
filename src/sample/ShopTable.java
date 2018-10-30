@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -37,6 +39,14 @@ public class ShopTable implements Initializable {
     TableView<Shop> tableshop;
     @FXML
     StackPane stackpane;
+    @FXML
+    LineChart linechart1;
+    @FXML
+    PieChart pie1;
+    @FXML
+    JFXTextArea text1;
+    @FXML
+    JFXTextArea text2;
     @FXML
     private TableColumn<Shop, Integer> sid;
 
@@ -315,51 +325,51 @@ public class ShopTable implements Initializable {
         insertshop.setScene(new Scene(root, 420, 512));
         insertshop.show();
     }
-    /*
-    public void btn(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+    public void load1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
         String uname = "root";
         String pass = "sc13111998";
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, uname, pass);
         Statement st = con.createStatement();
-        linechart.getData().clear();
-        XYChart.Series<String,Number> series=new XYChart.Series<String,Number>();
-        ResultSet r=st.executeQuery("select c.catname,count(pid) from category c,product p where c.catid=p.catid group by p.catid order by c.catid;");
-        while (r.next())
+        linechart1.getData().clear();
+        XYChart.Series<String,Number> series=new XYChart.Series<String, Number>();
+        StringBuilder stb1=new StringBuilder("SID"+"\t\t"+"Sname"+"\t\t"+"Total Profit\n\n");
+        ResultSet r1=st.executeQuery("select s.sid,s.sname,count(s.sid),sum(qty),sum(p.profit) from buy b,product p,shop s where p.pid=b.pid and s.sid=b.sid group by s.sid order by s.sid;");
+        while (r1.next())
         {
-            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
-            String str=r.getString("c.catname");
-            Number number = NumberFormat.getInstance().parse(r.getString("count(pid)"));
-            System.out.println(number.intValue());
-            //series.getData().add(new XYChart.Data<String, Number>());
-            series.getData().add(new XYChart.Data<String, Number>(str,number));
-            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+            String s=r1.getString("s.sname");
+            Integer num=Integer.parseInt(r1.getString("sum(p.profit)"));
+            series.getData().add(new XYChart.Data<String, Number>(s, num));
+            stb1.append(r1.getString("s.sid")+"\t\t"+s+"\t\t"+num+ "\n");
+
         }
-        linechart.getXAxis().setAnimated(false);
-        linechart.getData().add(series);
+        text1.setText(stb1.toString());
+        linechart1.getData().addAll(series);
 
     }
-    public void btn1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+
+    public void loadpie1(ActionEvent event) throws SQLException, ClassNotFoundException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
         String uname = "root";
         String pass = "sc13111998";
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, uname, pass);
         Statement st = con.createStatement();
-        barchart.getData().clear();
-        XYChart.Series series=new XYChart.Series<>();
-        ResultSet r=st.executeQuery("select c.catname,count(pid) from category c,product p where c.catid=p.catid group by p.catid order by c.catid;");
-       while (r.next())
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
+        pie1.getData().clear();
+        StringBuilder stb=new StringBuilder("SID"+"\t"+"Sname"+"\t\t"+"NoOfEmp\n\n");
+        ResultSet r1=st.executeQuery("select e.sid,s.sname,count(e.eid) from employee e,shop s where e.sid=s.sid group by e.sid order by e.sid;");
+        while (r1.next())
         {
-            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
-            String str=r.getString("c.catname");
-            Integer a =Integer.parseInt(r.getString("count(pid)"));
-        //series.getData().add(new XYChart.Data<String, Number>());
-        series.getData().add(new XYChart.Data<>(str,a));
-        //series.getData().add(new XYChart.Data<String, Number>("C",376));
-         }
-        barchart.getData().add(series);
-    }*/
+            String s=r1.getString("s.sname");
+            Integer num=Integer.parseInt(r1.getString("count(e.eid)"));
+            stb.append(r1.getString("e.sid")+"\t\t"+s+"\t\t"+num+"\n");
+            list.add(new PieChart.Data(s,num));
+
+        }
+        pie1.setData(list);
+        text2.setText(stb.toString());
+    }
 
 }

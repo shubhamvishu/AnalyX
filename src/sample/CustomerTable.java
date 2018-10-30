@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,11 +29,13 @@ import java.util.ResourceBundle;
 public class CustomerTable implements Initializable {
 
     public static Stage insert;
-    @FXML PieChart pie1;
-    @FXML PieChart pie2;
     @FXML TableView<Customer> tablecustomer;
     @FXML
     StackPane stackpane;
+    @FXML PieChart pie1;
+    @FXML PieChart pie2;
+    @FXML JFXTextArea text1;
+    @FXML JFXTextArea text2;
     @FXML
     private TableColumn<Customer, Integer> cid;
 
@@ -47,6 +50,8 @@ public class CustomerTable implements Initializable {
 
     @FXML
     private Label lab;
+    @FXML
+    private Label lab1;
 
     @FXML
     private TextField cmd;
@@ -305,26 +310,54 @@ public class CustomerTable implements Initializable {
         insert.show();
     }
 
-    @FXML
-    public void piedata1(ActionEvent event)
-    {
-        ObservableList<PieChart.Data> list=FXCollections.observableArrayList(
-                new PieChart.Data("Java",60),
-                new PieChart.Data("C++",45),
-                new PieChart.Data("Python",25)
-        );
-        pie1.setData(list);
+    public void loadpie1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
+        pie1.getData().clear();
+        StringBuilder stb=new StringBuilder("CID"+"\t\t"+"Cname"+"\t\t"+"Spent"+"\n\n");
+        ResultSet r1=st.executeQuery(" select b.cid,c.cname,count(b.pid),sum(pcost*b.qty) from buy b,customer c,product p where b.pid=p.pid and c.cid=b.cid and year(dop)=year(curdate()) and month(dop)=month(curdate()) group by b.cid order by b.cid;");
+        int max=0;
+        String winner="";
+        while (r1.next())
+        {
+            String s=r1.getString("c.cname");
+            Integer num=Integer.parseInt(r1.getString("sum(pcost*b.qty)"));
+            if(num>max)
+                winner=s;
+            stb.append(r1.getString("b.cid")+"\t\t"+s+"\t\t"+num+"\n\n");
+            list.add(new PieChart.Data(s,num));
 
+        }
+        lab1.setText("Winner of Current month Contest :  "+winner);
+        pie1.setData(list);
+        text1.setText(stb.toString());
     }
-    @FXML
-    public void piedata2(ActionEvent event)
-    {
-        ObservableList<PieChart.Data> list=FXCollections.observableArrayList(
-                new PieChart.Data("Java",60),
-                new PieChart.Data("C++",45),
-                new PieChart.Data("Python",25)
-        );
+    public void loadpie2(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
+        pie2.getData().clear();
+        StringBuilder stb=new StringBuilder("CID"+"\t\t"+"Cname"+"\t\t"+"Spent"+"\n\n");
+        ResultSet r1=st.executeQuery("select b.cid,c.cname,count(b.pid),sum(pcost*b.qty) from buy b,customer c,product p where b.pid=p.pid and c.cid=b.cid group by b.cid order by b.cid;");
+        while (r1.next())
+        {
+            String s=r1.getString("c.cname");
+            Integer num=Integer.parseInt(r1.getString("sum(pcost*b.qty)"));
+            stb.append(r1.getString("b.cid")+"\t\t"+s+"\t\t"+num+"\n");
+            list.add(new PieChart.Data(s,num));
+
+        }
         pie2.setData(list);
+        text2.setText(stb.toString());
     }
 
 }

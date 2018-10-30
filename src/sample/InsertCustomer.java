@@ -61,7 +61,7 @@ public class InsertCustomer {
             }
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            CustomerTable.insert.close();
 
 
         }
@@ -82,7 +82,7 @@ public class InsertCustomer {
     public void cancelInsert(ActionEvent event)
     {
         CustomerTable.insert.close();
-        OpentableController.prim.setOpacity(1.0);
+
     }
 
 }

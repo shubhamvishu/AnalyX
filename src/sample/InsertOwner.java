@@ -54,7 +54,7 @@ public class InsertOwner {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            OwnerTable.insertowner.close();
 
 
         }
@@ -75,7 +75,6 @@ public class InsertOwner {
     public void cancelInsert(ActionEvent event)
     {
         OwnerTable.insertowner.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

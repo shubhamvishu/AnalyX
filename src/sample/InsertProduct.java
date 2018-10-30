@@ -65,7 +65,7 @@ public class InsertProduct {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            ProductTable.insertproduct.close();
 
 
         }
@@ -86,7 +86,6 @@ public class InsertProduct {
     public void cancelInsert(ActionEvent event)
     {
         ProductTable.insertproduct.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

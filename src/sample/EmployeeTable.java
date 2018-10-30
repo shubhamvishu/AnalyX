@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,9 +39,9 @@ public class EmployeeTable implements Initializable {
     @FXML
     StackPane stackpane;
     @FXML
-    LineChart<String,Number> linechart;
+    BarChart<String,Number> barchart1;
     @FXML
-    BarChart<String,Number> barchart;
+    JFXTextArea text1;
     @FXML
     private TableColumn<Employee, Integer> eid;
 
@@ -376,50 +377,32 @@ public class EmployeeTable implements Initializable {
         insertemployee.setScene(new Scene(root, 527, 794));
         insertemployee.show();
     }
-    public void btn(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+    public void loadbar1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
         String uname = "root";
         String pass = "sc13111998";
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, uname, pass);
         Statement st = con.createStatement();
-        linechart.getData().clear();
-        XYChart.Series<String,Number> series=new XYChart.Series<String,Number>();
-        ResultSet r=st.executeQuery("select c.catname,count(pid) from category c,product p where c.catid=p.catid group by p.catid order by c.catid;");
+        barchart1.getData().clear();
+        XYChart.Series series=new XYChart.Series<>();
+        XYChart.Series series1=new XYChart.Series<>();
+        StringBuilder stb=new StringBuilder("Oname"+"\t\t"+"UP"+"\t\t"+"DOWN\n\n");
+        ResultSet r=st.executeQuery("select eid,ename,up,down from employee e;");
         while (r.next())
         {
             //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
-            String str=r.getString("c.catname");
-            Number number = NumberFormat.getInstance().parse(r.getString("count(pid)"));
-            System.out.println(number.intValue());
+            String str=r.getString("ename");
+            Integer num1 =Integer.parseInt(r.getString("up"));
+            Integer num2 =Integer.parseInt(r.getString("down"));
             //series.getData().add(new XYChart.Data<String, Number>());
-            series.getData().add(new XYChart.Data<String, Number>(str,number));
+            series.getData().add(new XYChart.Data<>(str,num1));
+            series1.getData().add(new XYChart.Data<>(str,num2));
+            stb.append(r.getString("ename")+"\t\t"+num1+"\t\t"+num2+"\n");
             //series.getData().add(new XYChart.Data<String, Number>("C",376));
         }
-        linechart.getXAxis().setAnimated(false);
-        linechart.getData().add(series);
-
-    }
-    public void btn1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
-        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
-        String uname = "root";
-        String pass = "sc13111998";
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection(url, uname, pass);
-        Statement st = con.createStatement();
-        barchart.getData().clear();
-        XYChart.Series series=new XYChart.Series<>();
-        ResultSet r=st.executeQuery("select c.catname,count(pid) from category c,product p where c.catid=p.catid group by p.catid order by c.catid;");
-       while (r.next())
-        {
-            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
-            String str=r.getString("c.catname");
-            Integer a =Integer.parseInt(r.getString("count(pid)"));
-        //series.getData().add(new XYChart.Data<String, Number>());
-        series.getData().add(new XYChart.Data<>(str,a));
-        //series.getData().add(new XYChart.Data<String, Number>("C",376));
-         }
-        barchart.getData().add(series);
+        text1.setText(stb.toString());
+        barchart1.getData().addAll(series,series1);
     }
 
 }

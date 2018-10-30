@@ -46,7 +46,7 @@ public class InsertOwnshop {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            OwnshopTable.insertownshop.close();
 
 
         }
@@ -67,7 +67,6 @@ public class InsertOwnshop {
     public void cancelInsert(ActionEvent event)
     {
         OwnshopTable.insertownshop.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

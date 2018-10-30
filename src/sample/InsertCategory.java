@@ -54,7 +54,7 @@ public class InsertCategory {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            CategoryTable.insertcategory.close();
 
 
         }
@@ -75,7 +75,7 @@ public class InsertCategory {
     public void cancelInsert(ActionEvent event)
     {
         CategoryTable.insertcategory.close();
-        OpentableController.prim.setOpacity(1.0);
+
     }
 
 }

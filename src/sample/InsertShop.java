@@ -55,7 +55,7 @@ public class InsertShop {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            ShopTable.insertshop.close();
 
 
         }
@@ -76,7 +76,6 @@ public class InsertShop {
     public void cancelInsert(ActionEvent event)
     {
         ShopTable.insertshop.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

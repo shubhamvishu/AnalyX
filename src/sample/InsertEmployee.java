@@ -76,7 +76,7 @@ public class InsertEmployee {
              st.executeUpdate(q);
             else
                 throw new Exception();
-            OpentableController.prim.setOpacity(1.0);
+            EmployeeTable.insertemployee.close();
 
 
         }
@@ -97,7 +97,6 @@ public class InsertEmployee {
     public void cancelInsert(ActionEvent event)
     {
         EmployeeTable.insertemployee.close();
-        OpentableController.prim.setOpacity(1.0);
     }
 
 }

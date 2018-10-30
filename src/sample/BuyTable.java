@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -37,6 +39,8 @@ public class BuyTable implements Initializable {
     StackPane stackpane;
     @FXML LineChart linechart1;
     @FXML LineChart linechart2;
+    @FXML LineChart linechart3;
+    @FXML PieChart pie1;
     @FXML private TableColumn<Buy, Integer> cid;
     @FXML private TableColumn<Buy, Integer> pid;
     @FXML private TableColumn<Buy, Integer> sid;
@@ -45,6 +49,10 @@ public class BuyTable implements Initializable {
     @FXML private Label lab;
     @FXML private Label lab1;
     @FXML private Label lab2;
+    @FXML private Label lab3;
+    @FXML private JFXTextArea text1;
+    @FXML private JFXTextArea text2;
+    @FXML private JFXTextArea text3;
     @FXML
     private TextField cmd;
 
@@ -337,7 +345,7 @@ public class BuyTable implements Initializable {
         Statement st = con.createStatement();
         linechart1.getData().clear();
         XYChart.Series<String,Number> series=new XYChart.Series<String, Number>();
-        StringBuilder stb1=new StringBuilder("");
+        StringBuilder stb1=new StringBuilder("Month\tNo. of purchases\n");
         for(int i=1;i<=12;i++) {
             int count=0;
             ResultSet r=st.executeQuery("select month(dop) from buy where year(dop)=year(curdate()) order by month(dop);");
@@ -348,7 +356,7 @@ public class BuyTable implements Initializable {
                     System.out.println("ABCD");
                 }
             }
-            stb1.append(i + "       " + count+ "\n");
+            stb1.append(i + "\t\t\t" + count+ "\n");
             Number number1 =count;
             series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), number1));
 
@@ -377,7 +385,7 @@ public class BuyTable implements Initializable {
                     System.out.println("ABCD");
                 }
             }
-            stb1.append(i + "       " + count+ "\n");
+            stb1.append(i + "\t\t\t" + count+ "\n");
             Number number1 =count;
             series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), number1));
 
@@ -395,17 +403,60 @@ public class BuyTable implements Initializable {
                 }
 
             }
-            stb2.append(i + "       " + count+ "\n");
+            stb2.append(i + "\t\t\t" + count+ "\n");
             Number number2 =count;
             series1.getData().add(new XYChart.Data<String, Number>(String.valueOf(i),number2));
 
         }
-        lab2.setText("2017\n"+stb1.toString()+"\n\n"+"2018\n"+stb2.toString());
+        text1.setText("2017\nMonth\tNo. of purchases\n"+stb1.toString()+"\n\n"+"2018\nMonth\tNo. of purchases\n"+stb2.toString());
         linechart2.getData().addAll(series,series1);
 
     }
 
+    public void load3(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        linechart3.getData().clear();
+        XYChart.Series<String,Number> series=new XYChart.Series<String, Number>();
+        StringBuilder stb1=new StringBuilder("PID"+"\t\t"+"Pname"+"\t\t"+"Total Profit\n\n");
+        ResultSet r1=st.executeQuery(" select b.pid,p.pname,sum(b.qty),p.profit*sum(b.qty) as total from buy b,product p where p.pid=b.pid group by b.pid order by b.pid;");
+        while (r1.next())
+        {
+            String s=r1.getString("p.pname");
+            Integer num=Integer.parseInt(r1.getString("total"));
+            series.getData().add(new XYChart.Data<String, Number>(s, num));
+            stb1.append(r1.getString("b.pid")+"\t\t"+s+"\t\t"+num+ "\n");
 
+        }
+        text2.setText(stb1.toString());
+        linechart3.getData().addAll(series);
 
+    }
+    public void loadpie1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
+        pie1.getData().clear();
+        StringBuilder stb=new StringBuilder("PID"+"\t"+"Qty Sold"+"\t\t"+"Pname\n\n");
+        ResultSet r1=st.executeQuery("select b.pid,p.pname,count(b.pid),sum(qty),sum(p.profit) from buy b,product p where p.pid=b.pid group by b.pid;");
+        while (r1.next())
+        {
+            String s=r1.getString("p.pname");
+            Integer num=Integer.parseInt(r1.getString("sum(qty)"));
+            stb.append(r1.getString("b.pid")+"\t\t"+num+"\t\t"+s+"\n");
+            list.add(new PieChart.Data(s,num));
+
+        }
+        pie1.setData(list);
+        text3.setText(stb.toString());
+    }
 
 }

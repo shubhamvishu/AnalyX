@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
@@ -22,6 +25,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class OwnerTable implements Initializable {
@@ -32,6 +36,10 @@ public class OwnerTable implements Initializable {
     TableView<Owner> tableowner;
     @FXML
     StackPane stackpane;
+    @FXML
+    BarChart barchart1;
+    @FXML
+    JFXTextArea text1;
     @FXML
     private TableColumn<Owner, Integer> oid;
 
@@ -287,6 +295,30 @@ public class OwnerTable implements Initializable {
         insertowner.setResizable(false);
         insertowner.setScene(new Scene(root, 444, 555));
         insertowner.show();
+    }
+    public void loadbar1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        barchart1.getData().clear();
+        XYChart.Series series=new XYChart.Series<>();
+        StringBuilder stb=new StringBuilder("OID"+"\t\t"+"Oname"+"\t\t"+"ShopsOwned\n\n");
+        ResultSet r=st.executeQuery(" select own.oid,o.oname,count(own.sid) from owner o,ownshop own where o.oid=own.oid group by own.oid order by own.oid;");
+        while (r.next())
+        {
+            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
+            String str=r.getString("o.oname");
+            Integer num =Integer.parseInt(r.getString("count(own.sid)"));
+            //series.getData().add(new XYChart.Data<String, Number>());
+            series.getData().add(new XYChart.Data<>(str,num));
+            stb.append(r.getString("own.oid")+"\t\t"+str+"\t\t"+num+"\n");
+            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        }
+        text1.setText(stb.toString());
+        barchart1.getData().add(series);
     }
 
 

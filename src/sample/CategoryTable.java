@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,9 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
@@ -22,6 +26,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class CategoryTable implements Initializable {
@@ -29,6 +34,14 @@ public class CategoryTable implements Initializable {
     public static Stage insertcategory;
 
     @FXML TableView<Category> tablecategory;
+    @FXML
+    PieChart pie1;
+    @FXML
+    BarChart barchart1;
+    @FXML
+    JFXTextArea text1;
+    @FXML
+    JFXTextArea text2;
     @FXML
     StackPane stackpane;
     @FXML
@@ -46,9 +59,7 @@ public class CategoryTable implements Initializable {
     @FXML
     private TextField cmd;
 
-    public ObservableList<Category> list= FXCollections.observableArrayList(
-            new Category(56,"shubham","yoyoyoyoyoyoyo")
-    );
+    public ObservableList<Category> list= FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -312,6 +323,52 @@ public class CategoryTable implements Initializable {
         insertcategory.setResizable(false);
         insertcategory.setScene(new Scene(root, 420, 512));
         insertcategory.show();
+    }
+    public void loadpie1(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
+        pie1.getData().clear();
+        StringBuilder stb=new StringBuilder("CATID"+"\t"+"Cname"+"\t"+"NoOfProducts\n\n");
+        ResultSet r1=st.executeQuery("select p.catid,c.catname,count(pid) from product p,category c where c.catid=p.catid group by p.catid order by p.catid;");
+        while (r1.next())
+        {
+            String s=r1.getString("c.catname");
+            Integer num=Integer.parseInt(r1.getString("count(pid)"));
+            list.add(new PieChart.Data(s,num));
+            stb.append(r1.getString("p.catid")+"\t\t"+s+"\t\t"+num+"\n");
+
+        }
+        pie1.setData(list);
+        text1.setText(stb.toString());
+    }
+    public void loadbar1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        barchart1.getData().clear();
+        XYChart.Series series=new XYChart.Series<>();
+        StringBuilder stb=new StringBuilder("CATID"+"\t"+"Cname"+"\t"+"NoOfShops\n\n");
+        ResultSet r=st.executeQuery(" select s.catid,c.catname,count(s.sid) from shop s,category c where s.catid=c.catid group by s.catid order by s.catid;");
+        while (r.next())
+        {
+            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
+            String str=r.getString("c.catname");
+            Integer num =Integer.parseInt(r.getString("count(s.sid)"));
+            //series.getData().add(new XYChart.Data<String, Number>());
+            series.getData().add(new XYChart.Data<>(str,num));
+            stb.append(r.getString("s.catid")+"\t\t"+str+"\t\t"+num+"\n");
+            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        }
+        text2.setText(stb.toString());
+        barchart1.getData().add(series);
     }
 
 
