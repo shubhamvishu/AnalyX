@@ -3,12 +3,16 @@
 -fx-text-fill:#fff;
 -fx-text-color:#fff;
 }
-.jfx-button{
+.jfx-button-log{
   -fx-background-color:#263238;
 }
-.jfx-button:hover{
+.jfx-button-log:hover{
  -fx-background-color: #ffe305;
  -fx-text-fill:#000;
+}
+.btn-down{
+-fx-background-radius:10px;
+-fx-border-radius:10px;
 }
 .jfx-customer-textfield{
 -fx-prompt-text-fill: #c2bbbb;
@@ -46,4 +50,26 @@
 }
 .jfx-text-area{
 -fx-text-fill:#fff;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #00BCD4;
+}
+.jfx-tab-pane .headers-region .tab-selected-line {
+    -fx-background-color: #FFFF8D;
+}
+
+.jfx-tab-pane1 .tab-header-background {
+    -fx-background-color:#154360;
+    -fx-text-fill:#fff;
+}
+.jfx-tab-pane1 .headers-region .tab-selected-line {
+    -fx-background-color: #FFFF8D;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+.tablename{
+
+-fx-border-radius: 30 30 0 0;
+  -fx-background-radius: 20 20 0 0;
 }

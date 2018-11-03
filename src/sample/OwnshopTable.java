@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXTextArea;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
@@ -22,12 +25,17 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 public class OwnshopTable implements Initializable {
 
     public static Stage insertownshop;
 
+    @FXML
+    BarChart barchart1;
+    @FXML
+    JFXTextArea text1;
     @FXML
     TableView<Ownshop> tableownshop;
     @FXML
@@ -243,7 +251,7 @@ public class OwnshopTable implements Initializable {
                 textArea.setStyle("-fx-font-weight:bold;");
                 content.setBody(textArea);
                 JFXDialog dialog=new JFXDialog(stackpane,content,JFXDialog.DialogTransition.RIGHT);
-                content.setStyle("-fx-background-color:#45B39D;-fx-pref-width:600px;-fx-pref-height:450px;-fx-text-fill:#ff0000;-fx-text-color:#ff0000;");
+                content.setStyle("-fx-background-color:#2ECC71;-fx-pref-width:600px;-fx-pref-height:450px;-fx-text-fill:#ff0000;-fx-text-color:#ff0000;");
                 dialog.setContent(content);
                 JFXButton button=new JFXButton("Okay");
                 button.setStyle("-fx-background-color:#fff;-fx-text-fill:#000;-fx-font-weight:bold;-fx-pref-width:150px;-fx-pref-height:40px;-fx-background-radius:20px;-fx-border-radius:20px;");
@@ -269,6 +277,29 @@ public class OwnshopTable implements Initializable {
         insertownshop.setScene(new Scene(root, 444, 481));
         insertownshop.show();
     }
-
+    public void loadbar1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        barchart1.getData().clear();
+        XYChart.Series series=new XYChart.Series<>();
+        StringBuilder stb=new StringBuilder("OID"+"\t\t"+"Oname"+"\t\t"+"ShopsOwned\n\n");
+        ResultSet r=st.executeQuery(" select own.oid,o.oname,count(own.sid) from owner o,ownshop own where o.oid=own.oid group by own.oid order by own.oid;");
+        while (r.next())
+        {
+            //System.out.println(r.getString("c.catname")+" "+r.getString("count(pid)"));
+            String str=r.getString("o.oname");
+            Integer num =Integer.parseInt(r.getString("count(own.sid)"));
+            //series.getData().add(new XYChart.Data<String, Number>());
+            series.getData().add(new XYChart.Data<>(str,num));
+            stb.append(r.getString("own.oid")+"\t\t"+str+"\t\t"+num+"\n");
+            //series.getData().add(new XYChart.Data<String, Number>("C",376));
+        }
+        text1.setText(stb.toString());
+        barchart1.getData().add(series);
+    }
 
 }

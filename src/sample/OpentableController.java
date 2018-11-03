@@ -43,7 +43,7 @@ public class OpentableController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("FXML/"+comboBox.getValue() + ".fxml"));
             prim.setTitle("Shubham");
             prim.setResizable(false);
-            prim.setScene(new Scene(root, 1238, 780));
+            prim.setScene(new Scene(root, 1275, 801));
             prim.show();
         }
         catch (NullPointerException e)

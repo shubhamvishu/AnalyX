@@ -14,7 +14,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <StackPane fx:id="stackpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="1103.0" style="-fx-background-color: #283747; -fx-background-image: url(&quot;sample/img/PR.jpg&quot;); -fx-background-size: cover;" stylesheets="@../style.css">
@@ -66,12 +65,12 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXPasswordField>
-                        <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="423.0" onAction="#login" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Sign In" textFill="#ffe305">
+                        <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="423.0" onAction="#login" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" styleClass="jfx-button-log" stylesheets="@../style.css" text="Sign In" textFill="#ffe305">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton layoutX="283.0" layoutY="423.0" onAction="#logout" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" text="Log Out" textFill="#ffe305">
+                        <JFXButton layoutX="283.0" layoutY="423.0" onAction="#logout" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" styleClass="jfx-button-log" stylesheets="@../style.css" text="Log Out" textFill="#ffe305">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
