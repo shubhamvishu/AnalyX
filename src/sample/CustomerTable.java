@@ -24,6 +24,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class CustomerTable implements Initializable {
@@ -300,6 +301,10 @@ public class CustomerTable implements Initializable {
         }
 
         }
+        public void clear(ActionEvent event)
+        {
+            cmd.setText("");
+        }
     public void add(ActionEvent event) throws IOException {
         insert = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXML/Insertcustomer1.fxml"));
@@ -310,6 +315,40 @@ public class CustomerTable implements Initializable {
         insert.show();
     }
 
+    public void deletesel(ActionEvent event) throws Exception {
+        System.out.println("Shubham Chaudhary");
+        Customer c=tablecustomer.getSelectionModel().getSelectedItem();
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+        al.setTitle("ALERT!!!");
+        al.setHeaderText(null);
+        al.setContentText("Sure u want to delete??");
+        Optional<ButtonType> op=al.showAndWait();
+        //TimeUnit.SECONDS.sleep(3);
+        try {
+            if(op.get()==ButtonType.OK && op.isPresent()) {
+                System.out.println("1");
+                st.executeUpdate("delete from customer where cid=" + c.getCid() + ";");
+                addfromdb();
+                //System.out.println(c.getCid() + " " + c.getCname() + " " + c.getEmail() + " " + c.getPhno());
+            }
+            else {
+                System.out.println("2");
+                al.close();
+            }
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex);
+        }
+
+
+    }
     public void loadpie1(ActionEvent event) throws SQLException, ClassNotFoundException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
         String uname = "root";

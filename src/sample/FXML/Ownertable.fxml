@@ -83,7 +83,7 @@
                                         <Font name="System Bold" size="24.0" />
                                     </font>
                                 </Label>
-                                <JFXButton layoutX="1033.0" layoutY="95.0" onAction="#exec" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #BDC3C7; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="Clear">
+                                <JFXButton layoutX="1033.0" layoutY="95.0" onAction="#clear" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #BDC3C7; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="Clear">
                                     <font>
                                         <Font name="System Bold" size="15.0" />
                                     </font>
@@ -93,7 +93,7 @@
                                         <Font name="System Bold" size="18.0" />
                                     </font>
                                 </Label>
-                                <JFXButton fx:id="refresh1" layoutX="238.0" layoutY="687.0" onAction="#addfromdb" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #1A5276;" styleClass="btn-down" text="DELETE" textFill="WHITE">
+                                <JFXButton fx:id="del" layoutX="238.0" layoutY="687.0" onAction="#deletesel" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #1A5276;" styleClass="btn-down" text="DELETE" textFill="WHITE">
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>

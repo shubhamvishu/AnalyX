@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.text.ParseException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class OwnshopTable implements Initializable {
@@ -268,6 +269,10 @@ public class OwnshopTable implements Initializable {
 
         }
     }
+    public void clear(ActionEvent event)
+    {
+        cmd.setText("");
+    }
     public void add(ActionEvent event) throws IOException {
         insertownshop = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXML/Insertownshop1.fxml"));
@@ -276,6 +281,41 @@ public class OwnshopTable implements Initializable {
         insertownshop.setResizable(false);
         insertownshop.setScene(new Scene(root, 444, 481));
         insertownshop.show();
+    }
+    public void deletesel(ActionEvent event) throws Exception {
+        System.out.println("Shubham Chaudhary");
+        Ownshop o=tableownshop.getSelectionModel().getSelectedItem();
+        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+        String uname = "root";
+        String pass = "sc13111998";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        Statement st = con.createStatement();
+        Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+        al.setTitle("ALERT!!!");
+        al.setHeaderText(null);
+        al.setContentText("Sure u want to delete??");
+        Optional<ButtonType> op=al.showAndWait();
+        //TimeUnit.SECONDS.sleep(3);
+        try {
+            if(op.get()==ButtonType.OK && op.isPresent()) {
+                System.out.println("1");
+                System.out.println("delete from ownshop where oid=" +o.getOid()+" and sid="+o.getSid()+";");
+                st.executeUpdate("delete from ownshop where oid=" +o.getOid()+" and sid="+o.getSid()+";");
+                addfromdb();
+                //System.out.println(c.getCid() + " " + c.getCname() + " " + c.getEmail() + " " + c.getPhno());
+            }
+            else {
+                System.out.println("2");
+                al.close();
+            }
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex);
+        }
+
+
     }
     public void loadbar1(ActionEvent event) throws ClassNotFoundException, SQLException, ParseException {
         String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
