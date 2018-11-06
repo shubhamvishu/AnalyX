@@ -342,7 +342,7 @@ public class ProductTable implements Initializable {
         insertproduct.setTitle("New Product");
         insertproduct.initStyle(StageStyle.UNDECORATED);
         insertproduct.setResizable(false);
-        insertproduct.setScene(new Scene(root, 444, 555));
+        insertproduct.setScene(new Scene(root, 860, 609));
         insertproduct.show();
     }
     public void deletesel(ActionEvent event) throws Exception {

@@ -338,7 +338,7 @@ public class BuyTable implements Initializable {
         insertbuy.setTitle("New Purchase");
         insertbuy.initStyle(StageStyle.UNDECORATED);
         insertbuy.setResizable(false);
-        insertbuy.setScene(new Scene(root, 458, 596));
+        insertbuy.setScene(new Scene(root, 872, 596));
         insertbuy.show();
     }
     public void deletesel(ActionEvent event) throws Exception {

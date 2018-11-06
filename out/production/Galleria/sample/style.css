@@ -19,6 +19,11 @@
 -fx-text-fill:#fff;
 -fx-text-color:#c2bbbb;
 }
+.jfx-buy-textfield{
+-fx-prompt-text-fill: #b5b5b5;
+-fx-font-weight:bold;
+-fx-text-fill:#fff;
+}
 .query-textfield{
 -fx-text-fill:#fff;
 -fx-text-color:#fff;
@@ -28,15 +33,16 @@
 -fx-prompt-text-fill: #c2bbbb;
 -fx-text-fill: #fff;
 }
+.jfx-date-picker2 .text-field{
+-jfx-unfocus-color: #dadada;
+-jfx-font-weight:bold;
+-fx-prompt-text-fill:#b5b5b5;
+-fx-text-fill: #fff;
+}
 .jfx-insert-textfield{
 -fx-prompt-text-fill: #333;
 -fx-text-fill:#000;
 -fx-text-color:#333;
-}
-.jfx-date-picker2 .text-field{
--jfx-unfocus-color: #000;
--fx-prompt-text-fill: #000;
--fx-text-fill: #000;
 }
 .text-white{
 -fx-text-fill:#fff;
