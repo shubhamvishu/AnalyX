@@ -42,7 +42,7 @@
          </graphic>
       </JFXButton>
       <JFXTextField fx:id="tcatid" focusColor="#02eee6" labelFloat="true" layoutX="51.0" layoutY="445.0" prefHeight="37.0" prefWidth="355.0" promptText="Catid" styleClass="jfx-buy-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
-      <Pane layoutX="445.0" layoutY="-7.0" prefHeight="616.0" prefWidth="413.0" style="-fx-background-color: #111;">
+      <Pane layoutX="445.0" layoutY="-7.0" prefHeight="616.0" prefWidth="417.0" style="-fx-background-color: #dadada;">
          <children>
             <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="245.0" layoutY="97.0" rotate="30.0">
                <image>
@@ -78,7 +78,7 @@
             </ImageView>
             <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="-64.0" layoutY="30.0">
                <image>
-                  <Image url="@../img/add3.png" />
+                  <Image url="@../img/add.png" />
                </image>
                <effect>
                   <DropShadow />
@@ -96,14 +96,20 @@
                <image>
                   <Image url="@../img/necklace.png" />
                </image>
+               <effect>
+                  <DropShadow />
+               </effect>
             </ImageView>
             <Line endX="-94.0" endY="616.0" layoutX="94.0" startX="-94.0" startY="158.2928924560547" stroke="#dddddd" />
          </children>
       </Pane>
-      <Label alignment="CENTER" layoutX="51.0" layoutY="55.0" prefHeight="63.0" prefWidth="301.0" style="-fx-border-color: #00bfff; -fx-border-width: 3.5px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="   Add New Product  " textFill="#00b0ff">
+      <Label fx:id="head" alignment="CENTER" layoutX="51.0" layoutY="55.0" prefHeight="63.0" prefWidth="301.0" style="-fx-border-color: #00a4d6; -fx-background-color: #00a4d6; -fx-border-width: 3.5px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="   Add New Product  " textFill="WHITE">
          <font>
             <Font name="Lato Bold" size="24.0" />
          </font>
       </Label>
    </children>
+   <effect>
+      <DropShadow height="70.76" radius="30.9925" spread="0.34" width="55.21" />
+   </effect>
 </AnchorPane>

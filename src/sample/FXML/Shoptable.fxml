@@ -27,7 +27,7 @@
                     <children>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="794.0" prefWidth="1255.0" style="-fx-background-color: #333;" stylesheets="@../style.css">
                             <children>
-                                <TableView fx:id="tableshop" layoutX="27.0" layoutY="167.0" prefHeight="499.0" prefWidth="1222.0">
+                                <TableView fx:id="tableshop" layoutX="27.0" layoutY="167.0" prefHeight="499.0" prefWidth="1222.0" stylesheets="@../style.css">
                                     <columns>
                                         <TableColumn fx:id="sid" prefWidth="140.0" text="SID" />
                                         <TableColumn fx:id="sname" prefWidth="320.0" text="SNAME" />
@@ -50,9 +50,9 @@
                                         <Font name="System Bold" size="15.0" />
                                     </font>
                                 </JFXButton>
-                                <JFXButton fx:id="addcust" layoutX="28.0" layoutY="687.0" onAction="#add" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #3498DB;" styleClass="btn-down" text=" ADD" textFill="WHITE">
+                                <JFXButton fx:id="addcust" layoutX="28.0" layoutY="687.0" onAction="#add" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #3498DB;" styleClass="btn-down" text="  ADD" textFill="WHITE">
                                     <font>
-                                        <Font name="System Bold" size="15.0" />
+                                        <Font name="System Bold" size="18.0" />
                                     </font>
                                     <graphic>
                                         <ImageView fitHeight="40.0" fitWidth="40.0">
@@ -62,7 +62,7 @@
                                         </ImageView>
                                     </graphic>
                                 </JFXButton>
-                                <JFXButton fx:id="refresh" layoutX="451.0" layoutY="687.0" onAction="#addfromdb" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #888;" styleClass="btn-down" text="REFRESH" textFill="WHITE">
+                                <JFXButton fx:id="refresh" layoutX="648.0" layoutY="687.0" onAction="#addfromdb" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #888;" styleClass="btn-down" text="  REFRESH" textFill="WHITE">
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>
@@ -94,11 +94,30 @@
                                         <Font name="System Bold" size="18.0" />
                                     </font>
                                 </Label>
-                                <JFXButton fx:id="del" layoutX="238.0" layoutY="687.0" onAction="#deletesel" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #1A5276;" styleClass="btn-down" text="DELETE" textFill="WHITE">
+                                <JFXButton fx:id="del" layoutX="233.0" layoutY="687.0" onAction="#deletesel" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #1A5276;" styleClass="btn-down" text="  DELETE" textFill="WHITE">
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../img/icons8_Cancel_40px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                                 </JFXButton>
+                        <JFXButton fx:id="modify" layoutX="440.0" layoutY="687.0" onAction="#modify" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #fff;" styleClass="btn-down" text="  MODIFY">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../img/icons8_Edit_File_40px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
                             </children>
                         </AnchorPane>
                     </children>

@@ -7,39 +7,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Galleria_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/add2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/add3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/analytics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/basketball-jersey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/burger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/coffee-cup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/coffee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/diet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/goods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/laptop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/laundry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/necklace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/necklace2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/running-shoe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/sandwich.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/shirt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/shirt1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/shirt2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/shoe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/smartphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/img/smartphone2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/img/add-user4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/img/icons8_Cancel_40px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/img/icons8_Edit_File_40px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/img/store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/img/store2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/BuyTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/BuyTable$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/BuyTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/BuyTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/CategoryTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/CategoryTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/CategoryTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/CategoryTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/CustomerTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/CustomerTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/EmployeeTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/EmployeeTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/EmployeeTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/EmployeeTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Buytable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Buytable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Categorytable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Categorytable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Customertable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Customertable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Employeetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Employeetable.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertbuy1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertbuy1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertemployee1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertemployee1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertowner1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertowner1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertownshop1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertownshop1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertproduct1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertproduct1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertshop1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Insertshop1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Ownertable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Ownertable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Ownshoptable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Ownshoptable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Producttable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Producttable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Shoptable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/FXML/Shoptable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertBuy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertBuy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertOwnshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertOwnshop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/InsertShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/InsertShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/OwnerTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/OwnerTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/OwnerTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/OwnerTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/OwnshopTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/OwnshopTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/OwnshopTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/OwnshopTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/ProductTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/ProductTable$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/ProductTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/ProductTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/ShopTable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/ShopTable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/ShopTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/ShopTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Galleria/sample/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Galleria/sample/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/BuyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/BuyTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CategoryTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/CategoryTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CustomerTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/CustomerTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/EmployeeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EmployeeTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Buytable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Buytable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Customertable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Customertable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertcustomer1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertcustomer1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertowner1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertowner1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertownshop1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertownshop1.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Insertshop1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Insertshop1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Producttable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Producttable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertBuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertOwnshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertOwnshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/InsertShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/InsertShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/OwnerTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/OwnerTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/OwnshopTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/OwnshopTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/ProductTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ProductTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/ShopTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/ShopTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/style.css" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -98,71 +141,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/CustomerTable.java">
+      <file leaf-file-name="InsertCategory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertCategory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
-              <caret line="302" column="9" selection-start-line="302" selection-start-column="9" selection-end-line="302" selection-end-column="9" />
-              <folding>
-                <element signature="e#12314#12315#0" expanded="true" />
-                <element signature="e#12353#12354#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="118" column="47" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Insertbuy1.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="OwnshopTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/OwnshopTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
+            <state relative-caret-position="289">
+              <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuyTable.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InsertBuy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertBuy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1585">
+              <caret line="123" column="12" lean-forward="true" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertCustomer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertCustomer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertOwnshop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertOwnshop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="139" column="42" lean-forward="true" selection-start-line="139" selection-start-column="12" selection-end-line="139" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="112" column="51" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuyTable.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/BuyTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5202">
-              <caret line="340" column="47" selection-start-line="340" selection-start-column="47" selection-end-line="340" selection-end-column="47" />
+            <state relative-caret-position="255">
+              <caret line="397" column="161" selection-start-line="397" selection-start-column="161" selection-end-line="397" selection-end-column="161" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/style.css">
+      <file leaf-file-name="InsertOwner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertOwner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Insertproduct1.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="InsertShop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertShop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
+            <state relative-caret-position="310">
+              <caret line="116" column="68" lean-forward="true" selection-start-line="116" selection-start-column="68" selection-end-line="116" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/ProductTable.java">
+      <file leaf-file-name="InsertEmployee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/InsertEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5236">
-              <caret line="344" column="55" selection-start-line="344" selection-start-column="55" selection-end-line="344" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShopTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/ShopTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4828">
-              <caret line="322" column="5" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
+            <state relative-caret-position="357">
+              <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -179,6 +243,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>clear</find>
+      <find>text1</find>
+      <find>own</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -203,42 +269,42 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/SendSms.java" />
         <option value="$PROJECT_DIR$/src/sample/SendMail.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Insertowner1.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Insertownshop1.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/log.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/OpentableController.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/cat.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/style.css" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Producttable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Customertable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Buytable.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/OwnerTable.java" />
+        <option value="$PROJECT_DIR$/src/sample/ProductTable.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Insertshop1.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/ShopTable.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertBuy.java" />
+        <option value="$PROJECT_DIR$/src/sample/InsertOwnshop.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/EmployeeTable.java" />
+        <option value="$PROJECT_DIR$/src/sample/CustomerTable.java" />
+        <option value="$PROJECT_DIR$/src/sample/CategoryTable.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertCategory.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertCustomer.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertEmployee.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertOwner.java" />
-        <option value="$PROJECT_DIR$/src/sample/InsertOwnshop.java" />
-        <option value="$PROJECT_DIR$/src/sample/InsertProduct.java" />
         <option value="$PROJECT_DIR$/src/sample/InsertShop.java" />
-        <option value="$PROJECT_DIR$/src/sample/OpentableController.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/cat.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/CustomerTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Customertable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/CategoryTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/EmployeeTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/OwnerTable.java" />
+        <option value="$PROJECT_DIR$/src/sample/InsertProduct.java" />
         <option value="$PROJECT_DIR$/src/sample/OwnshopTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/ShopTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Buytable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Producttable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/ProductTable.java" />
         <option value="$PROJECT_DIR$/src/sample/BuyTable.java" />
-        <option value="$PROJECT_DIR$/src/sample/style.css" />
       </list>
     </option>
   </component>
@@ -258,6 +324,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -289,7 +356,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,16 +376,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample\FXML" />
-      <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample\img" />
       <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="sample" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample\FXML" />
+      <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample\img" />
       <recent name="C:\Users\shubh\IdeaProjects\Galleria\src\sample" />
     </key>
   </component>
@@ -441,7 +507,7 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32831737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32831737" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
@@ -480,13 +546,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Stud.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -495,16 +554,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/opentable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertcustomer1.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SendMail.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -519,40 +570,8 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Category.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="24" column="213" selection-start-line="24" selection-start-column="213" selection-end-line="24" selection-end-column="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="49" column="209" selection-start-line="49" selection-start-column="209" selection-end-line="49" selection-end-column="209" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Owner.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertowner1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertownshop1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -571,21 +590,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertshop1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/log.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Buy.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,69 +605,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertBuy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertOwner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertShop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="65" column="35" lean-forward="true" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InsertOwnshop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/cat.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="272" selection-end-line="170" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Product.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -686,150 +641,257 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CategoryTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="321" column="5" selection-start-line="321" selection-start-column="5" selection-end-line="321" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EmployeeTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/OwnerTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/OwnshopTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="274" column="5" selection-start-line="274" selection-start-column="5" selection-end-line="274" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ShopTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4828">
-          <caret line="322" column="5" selection-start-line="322" selection-start-column="5" selection-end-line="322" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Buytable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="95" column="108" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Customertable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="93" column="108" selection-start-line="93" selection-start-column="108" selection-end-line="93" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="90" column="91" selection-start-line="90" selection-start-column="91" selection-end-line="90" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="85" column="91" selection-start-line="85" selection-start-column="91" selection-end-line="85" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="83" column="91" selection-start-line="83" selection-start-column="91" selection-end-line="83" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Producttable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="87" column="91" selection-start-line="87" selection-start-column="91" selection-end-line="87" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="93" column="79" lean-forward="true" selection-start-line="93" selection-start-column="79" selection-end-line="93" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CustomerTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="302" column="9" selection-start-line="302" selection-start-column="9" selection-end-line="302" selection-end-column="9" />
-          <folding>
-            <element signature="e#12314#12315#0" expanded="true" />
-            <element signature="e#12353#12354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/ProductTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="344" column="55" selection-start-line="344" selection-start-column="55" selection-end-line="344" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/BuyTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5202">
-          <caret line="340" column="47" selection-start-line="340" selection-start-column="47" selection-end-line="340" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertbuy1.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="459">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertowner1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertproduct1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1184">
+          <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertcustomer1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Categorytable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="107" column="99" selection-start-line="107" selection-start-column="99" selection-end-line="107" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Employeetable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="112" column="99" selection-start-line="112" selection-start-column="99" selection-end-line="112" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Ownertable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="107" column="99" selection-start-line="107" selection-start-column="99" selection-end-line="107" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Producttable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="109" column="99" selection-start-line="109" selection-start-column="99" selection-end-line="109" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertownshop1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="102" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Ownshoptable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="105" column="99" selection-start-line="105" selection-start-column="99" selection-end-line="105" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Shoptable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Buytable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="109" column="99" selection-start-line="109" selection-start-column="99" selection-end-line="109" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Customertable.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1048">
+          <caret line="105" column="99" selection-start-line="105" selection-start-column="99" selection-end-line="105" selection-end-column="99" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertshop1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/OwnerTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="376" column="9" selection-start-line="376" selection-start-column="9" selection-end-line="376" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ProductTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="419" column="9" selection-start-line="419" selection-start-column="9" selection-end-line="419" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ShopTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="354" column="53" lean-forward="true" selection-start-line="354" selection-start-column="53" selection-end-line="354" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EmployeeTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="406" column="60" selection-start-line="406" selection-start-column="60" selection-end-line="406" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertemployee1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/CustomerTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="329" column="62" lean-forward="true" selection-start-line="329" selection-start-column="62" selection-end-line="329" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Insertcategory1.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="102" selection-start-line="11" selection-start-column="102" selection-end-line="11" selection-end-column="102" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/CategoryTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="343" column="56" selection-start-line="343" selection-start-column="56" selection-end-line="343" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="149" column="57" selection-start-line="149" selection-start-column="57" selection-end-line="149" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertOwner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertShop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="116" column="68" lean-forward="true" selection-start-line="116" selection-start-column="68" selection-end-line="116" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="112" column="51" selection-start-line="112" selection-start-column="51" selection-end-line="112" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertOwnshop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="139" column="42" lean-forward="true" selection-start-line="139" selection-start-column="12" selection-end-line="139" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="118" column="47" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/InsertBuy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1585">
+          <caret line="123" column="12" lean-forward="true" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/OwnshopTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/BuyTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="397" column="161" selection-start-line="397" selection-start-column="161" selection-end-line="397" selection-end-column="161" />
         </state>
       </provider>
     </entry>

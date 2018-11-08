@@ -25,6 +25,7 @@
 -fx-text-fill:#fff;
 }
 .query-textfield{
+-fx-prompt-text-fill: #dadada;
 -fx-text-fill:#fff;
 -fx-text-color:#fff;
 }
@@ -78,4 +79,8 @@
 
 -fx-border-radius: 30 30 0 0;
   -fx-background-radius: 20 20 0 0;
+}
+.table-view{
+-fx-font-weight:bold;
+-fx-font-family:Lato;
 }

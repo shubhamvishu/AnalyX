@@ -32,6 +32,7 @@ import java.util.ResourceBundle;
 public class OwnerTable implements Initializable {
 
     public static Stage insertowner;
+    public static Owner o;
 
     @FXML
     TableView<Owner> tableowner;
@@ -230,8 +231,9 @@ public class OwnerTable implements Initializable {
                 //TimeUnit.SECONDS.sleep(3);
                 al.close();
             }
-            catch (SQLException sq)
-            {   tableowner.getItems().clear();
+            catch (SQLException sq) {
+                try{
+                tableowner.getItems().clear();
                 ResultSet result = st.executeQuery("select * from owner");
                 System.out.println("F");
                 while (result.next()) {   //System.out.println(rs.next());
@@ -242,39 +244,39 @@ public class OwnerTable implements Initializable {
                     tableowner.getItems().add(new Owner(a, b, c, d));
 
                 }
-                StringBuilder str=new StringBuilder("");
+                StringBuilder str = new StringBuilder("");
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 //String url = "jdbc:mysql://localhost:3306/stud?allowPublicKeyRetrieval=true&useSSL=false";
                 //Connection con = DriverManager.getConnection(url,"root","sc13111998");
                 //Statement st=con.createStatement();
-                ResultSet rs=st.executeQuery(cmd.getText());
-                ResultSetMetaData rsm=rs.getMetaData();
-                String s=DBTablePrinter.printResultSet(rs);
+                ResultSet rs = st.executeQuery(cmd.getText());
+                ResultSetMetaData rsm = rs.getMetaData();
+                String s = DBTablePrinter.printResultSet(rs);
                 System.out.println(rsm);
                 System.out.println(rsm.getColumnCount());
                 for (int i = 1; i <= rsm.getColumnCount(); i++) {
-                    str.append(rsm.getColumnName(i)+"           ");
+                    str.append(rsm.getColumnName(i) + "           ");
                 }
                 str.append("\n----------------------------------------------------------------------------------------------" +
                         "---------------------------------------------------------------------------------------------------\n");
                 while (rs.next()) {
                     for (int i = 1; i <= rsm.getColumnCount(); i++) {
-                        str.append(rs.getString(i)+"            ");
+                        str.append(rs.getString(i) + "            ");
                     }
                     str.append("\n");
                 }
-                JFXDialogLayout content=new JFXDialogLayout();
-                Label label=new Label(" OUTPUT ");
+                JFXDialogLayout content = new JFXDialogLayout();
+                Label label = new Label(" OUTPUT ");
                 label.setStyle("-fx-text-fill:#fff;-fx-font-weight:bold;-fx-font-size:30px;-fx-alignment:center;-fx-font-family:Lato;-fx-border-color:#fff;-fx-border-width:4px;-fx-border-radius:10px;");
                 label.setAlignment(Pos.CENTER);
                 content.setHeading(label);
-                TextArea textArea=new TextArea(s);
+                TextArea textArea = new TextArea(s);
                 textArea.setStyle("-fx-font-weight:bold;");
                 content.setBody(textArea);
-                JFXDialog dialog=new JFXDialog(stackpane,content,JFXDialog.DialogTransition.TOP);
+                JFXDialog dialog = new JFXDialog(stackpane, content, JFXDialog.DialogTransition.TOP);
                 content.setStyle("-fx-background-color:#2ECC71;-fx-pref-width:600px;-fx-pref-height:450px;-fx-text-fill:#ff0000;-fx-text-color:#ff0000;");
                 dialog.setContent(content);
-                JFXButton button=new JFXButton("Okay");
+                JFXButton button = new JFXButton("Okay");
                 button.setStyle("-fx-background-color:#303030;-fx-text-fill:#fff;-fx-font-weight:bold;-fx-pref-width:150px;-fx-pref-height:40px;-fx-background-radius:20px;-fx-border-radius:20px;");
                 button.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
@@ -285,6 +287,17 @@ public class OwnerTable implements Initializable {
                 content.setActions(button);
                 dialog.show();
             }
+                catch (Exception e)
+                {
+                    Alert al = new Alert(Alert.AlertType.ERROR);
+                    al.setTitle("OOPS!!!");
+                    al.setHeaderText(null);
+                    al.setContentText("WRONG INPUT!!!");
+                    al.showAndWait();
+                    //TimeUnit.SECONDS.sleep(3);
+                    al.close();
+                }
+            }
 
         }
     }
@@ -293,44 +306,74 @@ public class OwnerTable implements Initializable {
         cmd.setText("");
     }
     public void add(ActionEvent event) throws IOException {
+        o=null;
         insertowner = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("FXML/Insertowner1.fxml"));
-        insertowner.setTitle("New Product");
+        insertowner.setTitle("New Owner");
         insertowner.initStyle(StageStyle.UNDECORATED);
         insertowner.setResizable(false);
-        insertowner.setScene(new Scene(root, 444, 555));
+        insertowner.setScene(new Scene(root, 773, 555));
         insertowner.show();
+    }
+    public void modify(ActionEvent event) throws IOException{
+        o=tableowner.getSelectionModel().getSelectedItem();
+        if(o!=null) {
+            insertowner = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("FXML/Insertowner1.fxml"));
+            insertowner.setTitle("Modify Owner");
+            insertowner.initStyle(StageStyle.UNDECORATED);
+            insertowner.setResizable(false);
+            insertowner.setScene(new Scene(root, 773, 555));
+            insertowner.show();
+        }
+        else{
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("Choose a record to modify");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
+        }
     }
     public void deletesel(ActionEvent event) throws Exception {
         System.out.println("Shubham Chaudhary");
         Owner o=tableowner.getSelectionModel().getSelectedItem();
-        String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
-        String uname = "root";
-        String pass = "sc13111998";
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection(url, uname, pass);
-        Statement st = con.createStatement();
-        Alert al = new Alert(Alert.AlertType.CONFIRMATION);
-        al.setTitle("ALERT!!!");
-        al.setHeaderText(null);
-        al.setContentText("Sure u want to delete??");
-        Optional<ButtonType> op=al.showAndWait();
-        //TimeUnit.SECONDS.sleep(3);
-        try {
-            if(op.get()==ButtonType.OK && op.isPresent()) {
-                System.out.println("1");
-                st.executeUpdate("delete from owner where oid=" + o.getOid() + ";");
-                addfromdb();
-                //System.out.println(c.getCid() + " " + c.getCname() + " " + c.getEmail() + " " + c.getPhno());
-            }
-            else {
-                System.out.println("2");
-                al.close();
+        if(o!=null) {
+            String url = "jdbc:mysql://localhost:3306/galleria?useSSL=false";
+            String uname = "root";
+            String pass = "sc13111998";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, uname, pass);
+            Statement st = con.createStatement();
+            Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+            al.setTitle("ALERT!!!");
+            al.setHeaderText(null);
+            al.setContentText("Sure u want to delete??");
+            Optional<ButtonType> op = al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            try {
+                if (op.get() == ButtonType.OK && op.isPresent()) {
+                    System.out.println("1");
+                    st.executeUpdate("delete from owner where oid=" + o.getOid() + ";");
+                    addfromdb();
+                    //System.out.println(c.getCid() + " " + c.getCname() + " " + c.getEmail() + " " + c.getPhno());
+                } else {
+                    System.out.println("2");
+                    al.close();
+                }
+            } catch (Exception ex) {
+                System.out.println(ex);
             }
         }
-        catch (Exception ex)
-        {
-            System.out.println(ex);
+        else {
+            Alert al = new Alert(Alert.AlertType.ERROR);
+            al.setTitle("OOPS!!!");
+            al.setHeaderText(null);
+            al.setContentText("Choose a record to delete");
+            al.showAndWait();
+            //TimeUnit.SECONDS.sleep(3);
+            al.close();
         }
 
 
