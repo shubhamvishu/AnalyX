@@ -3,15 +3,15 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Galleria_jar</output-path>
     <root id="archive" name="Galleria.jar">
       <element id="module-output" name="Galleria" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/twilio-7.24.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/activation-1.1.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Downloads/twilio-7.24.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/mysql-connector-java-8.0.12.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/javax.mail.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/jfoenix-8.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/javax.mail.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/mysql-connector-java-8.0.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/twilio-7.24.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/javax.mail-1.6.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/smtp-1.6.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/twilio-7.24.1-jar-with-dependencies.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/smtp-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/twilio-7.24.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Project/Project_JAR/activation-1.1.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/twilio-7.24.1-jar-with-dependencies.jar" path-in-jar="/" />
     </root>
   </artifact>
