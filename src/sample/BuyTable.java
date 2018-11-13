@@ -528,7 +528,7 @@ public class BuyTable implements Initializable {
         ObservableList<PieChart.Data> list=FXCollections.observableArrayList();
         pie1.getData().clear();
         StringBuilder stb=new StringBuilder("PID"+"\t"+"Qty Sold"+"\t\t"+"Pname\n\n");
-        ResultSet r1=st.executeQuery("select b.pid,p.pname,count(b.pid),sum(qty),sum(p.profit) from buy b,product p where p.pid=b.pid group by b.pid;");
+        ResultSet r1=st.executeQuery("select b.pid,p.pname,sum(qty) from buy b,product p where p.pid=b.pid group by b.pid;");
         while (r1.next())
         {
             String s=r1.getString("p.pname");

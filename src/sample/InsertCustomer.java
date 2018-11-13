@@ -60,7 +60,7 @@ public class InsertCustomer implements Initializable {
                 if (a != null && !b.isEmpty() && !c.isEmpty() && !d.isEmpty()) {
                     st.executeUpdate(q);
                     //SendMail sm=new SendMail(temail.getText());
-                    //SendSms sms=new SendSms("9876543210","Thankyou dear customer for choosing galleria......hope to see u soon");
+                    //SendSms sms=new SendSms("912345678","Thankyou dear customer for choosing galleria......hope to see u soon");
                 } else
                     throw new Exception();
                 CustomerTable.insert.close();

@@ -28,7 +28,7 @@ public class SendMail {
              properties.put("mail.smtp.port", 587);
              Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
                  protected PasswordAuthentication getPasswordAuthentication() {
-                     return new PasswordAuthentication("abcd@gmail.com", "abcd123");
+                     return new PasswordAuthentication("abcd@gmail.com", "1234");
                  }
 
              });
@@ -39,7 +39,7 @@ public class SendMail {
 
                  message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-                 message.setSubject("Hey its me");
+                 message.setSubject("The Galleria Mall");
 
                  BodyPart messageBodyPart1 = new MimeBodyPart();
                  messageBodyPart1.setText("Thanyou for shopping in Galleria mall");
