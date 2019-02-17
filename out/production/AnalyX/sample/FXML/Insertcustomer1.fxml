@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="609.0" prefWidth="427.0" style="-fx-background-color: #333;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InsertCustomer">
+   <children>
+      <JFXButton fx:id="addcust" layoutX="34.0" layoutY="529.0" onAction="#add" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: #06f141; -fx-background-radius: 30px; -fx-border-radius: 30px;" text="  Add">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT">
+               <image>
+                  <Image url="@../img/icons8_Plus_Math_64px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="tcid" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="238.0" prefHeight="37.0" prefWidth="355.0" promptText="CID" styleClass="jfx-buy-textfield" stylesheets="@../style.css" unFocusColor="#c2bbbb" />
+      <JFXTextField fx:id="tcname" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="307.0" prefHeight="37.0" prefWidth="355.0" promptText="Customer's Name" styleClass="jfx-buy-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXTextField fx:id="temail" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="373.0" prefHeight="37.0" prefWidth="355.0" promptText="Email ID" styleClass="jfx-buy-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXTextField fx:id="tphno" focusColor="#02eee6" labelFloat="true" layoutX="34.0" layoutY="438.0" prefHeight="37.0" prefWidth="355.0" promptText="Phone No." styleClass="jfx-buy-textfield" stylesheets="@../style.css" unFocusColor="#d0c9c9" />
+      <JFXButton fx:id="cancel" layoutX="220.0" layoutY="529.0" onAction="#cancelInsert" prefHeight="52.0" prefWidth="169.0" style="-fx-background-color: #dadada#34495E; -fx-background-radius: 30px; -fx-border-radius: 30px;" text=" Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../img/icons8_Delete_64px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView layoutX="172.0" layoutY="29.0">
+         <image>
+            <Image url="@../img/icons8_Add_User_Male_96px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="head" alignment="CENTER" layoutX="69.0" layoutY="154.0" prefHeight="52.0" prefWidth="289.0" style="-fx-background-color: #111; -fx-background-radius: 10px;" text="Add New Customer" textFill="WHITE">
+         <font>
+            <Font name="Lato Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

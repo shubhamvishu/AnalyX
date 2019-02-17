@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="1103.0" style="-fx-background-color: #283747; -fx-background-image: url(&quot;sample/img/PR.jpg&quot;); -fx-background-size: cover;" stylesheets="@../style.css">
+         <children>
+            <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="605.0" prefWidth="280.0" style="-fx-background-color: #888; -fx-background-image: url(&quot;sample/img/black2.jpg&quot;);">
+               <children>
+                  <Label fx:id="res" layoutX="31.0" layoutY="303.0" prefHeight="63.0" prefWidth="237.0" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="-1.0" layoutY="397.0" prefHeight="208.0" prefWidth="280.0" style="-fx-background-color: #101010;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="31.0" layoutY="73.0" prefHeight="59.0" prefWidth="231.0" text="AnalyX" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="141.0" fitWidth="140.0" layoutX="70.0" layoutY="126.0">
+                     <image>
+                        <Image url="@../img/icons8_Three_Leaf_Clover_100px_5.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="mainlog" layoutX="280.0" prefHeight="605.0" prefWidth="746.0">
+               <children>
+                  <Pane layoutX="248.0" layoutY="40.0" prefHeight="526.0" prefWidth="451.0" style="-fx-background-color: #1C2833;">
+                     <children>
+                        <JFXTextField fx:id="user" focusColor="#ffe305" labelFloat="true" layoutX="102.0" layoutY="147.0" prefHeight="31.0" prefWidth="309.0" promptText="Username" styleClass="jfx-textfield" stylesheets="@../style.css" unFocusColor="#ffe305">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="pass" focusColor="#ffe305" labelFloat="true" layoutX="99.0" layoutY="278.0" prefHeight="31.0" prefWidth="316.0" promptText="Password" styleClass="jfx-textfield" stylesheets="@../style.css" unFocusColor="#ffe305">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="423.0" onAction="#login" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" styleClass="jfx-button-log" stylesheets="@../style.css" text="Sign In" textFill="#ffe305">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="283.0" layoutY="423.0" onAction="#logout" prefHeight="53.0" prefWidth="140.0" ripplerFill="#ffa505" style="-fx-border-color: #ffe305; -fx-border-width: 4px; -fx-border-radius: 25px; -fx-background-radius: 25px;" styleClass="jfx-button-log" stylesheets="@../style.css" text="Log Out" textFill="#ffe305">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView layoutX="25.0" layoutY="142.0">
+                           <image>
+                              <Image url="@../img/icons8_Male_User_50px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="25.0" layoutY="273.0">
+                           <image>
+                              <Image url="@../img/icons8_Lock_50px.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="152.0" layoutY="27.0" prefHeight="31.0" prefWidth="140.0" style="-fx-border-color: #fff; -fx-border-width: 4px; -fx-border-radius: 10px;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Lato Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="checkbox" checkedColor="#979210" layoutX="36.0" layoutY="364.0" prefHeight="31.0" prefWidth="174.0" text="Remember me" textFill="WHITE" unCheckedColor="#a8a6a6">
+                           <font>
+                              <Font name="Lato Bold" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainabout" layoutX="274.0" prefHeight="605.0" prefWidth="766.0" visible="false">
+               <children>
+                  <Pane layoutX="38.0" layoutY="37.0" prefHeight="523.0" prefWidth="687.0" style="-fx-background-color: rgba(21, 67, 96,0.65); -fx-background-radius: 40px; -fx-border-radius: 30px;">
+                     <children>
+                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="235.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/me-round.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="413.0" prefHeight="53.0" prefWidth="287.0" text="SHUBHAM CHAUDHARY&#10;" textFill="#f8ff29">
+                           <font>
+                              <Font name="Lato Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" prefHeight="117.0" prefWidth="656.0" text="AnalyX is a simple dekstop application that can be used for data analysis of&#10; mall database and perform all the database related operations effectively." textFill="WHITE">
+                           <font>
+                              <Font name="Lato Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="144.0" prefHeight="39.0" prefWidth="174.0" text="Developed By :" textFill="#2be0ff">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Line endX="128.0" layoutX="405.0" layoutY="467.0" startX="-252.0" stroke="WHITE" strokeWidth="2.0" />
+                        <Label layoutX="274.0" layoutY="478.0" prefHeight="31.0" prefWidth="140.0" text="1NH16CS752" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="in" layoutX="1026.0" onMouseClicked="#logg" prefHeight="302.0" prefWidth="76.0" style="-fx-background-color: #000 #424949;">
+               <children>
+                  <ImageView layoutX="18.0" layoutY="124.0">
+                     <image>
+                        <Image url="@../img/icons8_Male_User_40px_2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="about" layoutX="1026.0" layoutY="303.0" onMouseClicked="#logg" prefHeight="302.0" prefWidth="76.0" style="-fx-background-color: #CACFD2;">
+               <children>
+                  <ImageView layoutX="18.0" layoutY="131.0">
+                     <image>
+                        <Image url="@../img/icons8_Info_40px_2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
