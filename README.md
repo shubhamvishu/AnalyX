@@ -1,5 +1,5 @@
-# Galleria
-Galleria is a desktop application developed in Java using JavaFX platform for the purpose of data analysis. It can be used for data analysis of data from a mall (i.e. mall database) and also to perform all the database related operations effectively.
+# AnalyX
+AnalyX is a desktop application developed in Java using JavaFX platform for the purpose of data analysis. It can be used for data analysis of data from a mall (i.e. mall database) and also to perform all the database related operations effectively.
 The database is implemented using MYSQL database.
 
 It effectively make use of Javamail API for sending email and Twilio SMS API to send text-messages.
