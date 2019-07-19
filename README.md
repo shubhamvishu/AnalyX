@@ -12,3 +12,29 @@ It allows fast & easy manipulations like insertion,modification,deletion of data
 * JDK version : Java-8
 
 * APIs Used : Twilio SMS API, Javamail API
+### Login
+![Login](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_1.JPG)
+
+## Database
+![Customer Database](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_3.JPG)
+
+![New Customer](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_4.JPG)
+
+![Modify Customer](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_5.JPG)
+
+![Employee Database](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_13.JPG)
+
+## Database Querying
+![Querying Database](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_6.JPG)
+
+## Data Analysis
+
+![Products Sold](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_8.JPG)
+
+![Customers](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_7.JPG)
+
+![Sales Comparison](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_9.JPG)
+
+![Profir per productt](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_10.JPG)
+
+![Reviews](https://github.com/shubhamvishu/AnalyX/blob/master/screenshots/IMG_11.JPG)
